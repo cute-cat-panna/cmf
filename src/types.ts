@@ -5,6 +5,7 @@ export interface CMFItem {
   type: CMFType;
   name: string;
   nameEn?: string;
+  category?: string;
   description: string;
   image: string;
   tags: string[];

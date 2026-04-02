@@ -5,10 +5,11 @@ export const cmfData: CMFItem[] = [
   {
     id: 'mat-abs',
     type: 'Material',
-    name: 'ABS',
+    category: '塑料',
+    name: 'ABS树脂',
     nameEn: 'Acrylonitrile Butadiene Styrene',
     description: '丙烯腈-丁二烯-苯乙烯共聚物。综合性能优良，易于加工成型。',
-    image: 'https://picsum.photos/seed/abs-plastic/800/600',
+    image: 'https://s41.ax1x.com/2026/04/03/peYnmkD.jpg',
     tags: ['工程塑料', '高光泽', '易加工'],
     properties: {
       density: '1.04–1.06 g/cm³',
@@ -37,10 +38,11 @@ export const cmfData: CMFItem[] = [
   {
     id: 'mat-pc',
     type: 'Material',
-    name: 'PC',
+    category: '塑料',
+    name: 'PC(聚碳酸酯)',
     nameEn: 'Polycarbonate',
     description: '聚碳酸酯。高透明度，极佳的抗冲击性能。',
-    image: 'https://picsum.photos/seed/pc-plastic/800/600',
+    image: 'https://s41.ax1x.com/2026/04/03/peYnnte.jpg',
     tags: ['透明', '高强度', '耐热'],
     properties: {
       density: '1.20–1.22 g/cm³',
@@ -69,10 +71,11 @@ export const cmfData: CMFItem[] = [
   {
     id: 'mat-pom',
     type: 'Material',
-    name: 'POM',
+    category: '塑料',
+    name: 'POM(聚甲醛)',
     nameEn: 'Polyoxymethylene',
     description: '聚甲醛，俗称“赛钢”。具有极高的刚性和硬度，优异的自润滑性。',
-    image: 'https://picsum.photos/seed/pom-plastic/800/600',
+    image: 'https://picsum.photos/seed/pom-plastic-gear/800/600',
     tags: ['高刚性', '自润滑', '耐磨'],
     properties: {
       density: '1.41–1.42 g/cm³',
@@ -101,10 +104,11 @@ export const cmfData: CMFItem[] = [
   {
     id: 'mat-pa',
     type: 'Material',
+    category: '塑料',
     name: 'PA (尼龙)',
     nameEn: 'Polyamide',
     description: '聚酰胺。机械强度高，韧性好，耐化学药品性优良。',
-    image: 'https://picsum.photos/seed/nylon-pa/800/600',
+    image: 'https://picsum.photos/seed/nylon-pa66/800/600',
     tags: ['高韧性', '耐疲劳', '机械件'],
     properties: {
       density: '1.13–1.15 g/cm³',
@@ -133,10 +137,11 @@ export const cmfData: CMFItem[] = [
   {
     id: 'mat-pmma',
     type: 'Material',
+    category: '塑料',
     name: 'PMMA (亚克力)',
     nameEn: 'Polymethyl Methacrylate',
     description: '聚甲基丙烯酸甲酯。具有极佳的透明度和耐候性。',
-    image: 'https://picsum.photos/seed/pmma-acrylic/800/600',
+    image: 'https://picsum.photos/seed/acrylic-pmma-clear/800/600',
     tags: ['高透明', '光学级', '耐候'],
     properties: {
       density: '1.17–1.20 g/cm³',
@@ -165,10 +170,11 @@ export const cmfData: CMFItem[] = [
   {
     id: 'mat-pe',
     type: 'Material',
+    category: '塑料',
     name: 'PE (聚乙烯)',
     nameEn: 'Polyethylene',
     description: '聚乙烯。耐腐蚀性优异，电绝缘性好，手感温润。',
-    image: 'https://picsum.photos/seed/pe-plastic/800/600',
+    image: 'https://picsum.photos/seed/hdpe-polyethylene/800/600',
     tags: ['耐腐蚀', '食品级', '低成本'],
     properties: {
       density: '0.94–0.97 g/cm³',
@@ -197,10 +203,11 @@ export const cmfData: CMFItem[] = [
   {
     id: 'mat-pvc',
     type: 'Material',
-    name: 'PVC',
+    category: '塑料',
+    name: 'PVC(聚氯乙烯)',
     nameEn: 'Polyvinyl Chloride',
     description: '聚氯乙烯。阻燃性好，化学稳定性高，应用极广。',
-    image: 'https://picsum.photos/seed/pvc-plastic/800/600',
+    image: 'https://picsum.photos/seed/pvc-material-industrial/800/600',
     tags: ['阻燃', '耐化学', '多功能'],
     properties: {
       density: '1.35–1.45 g/cm³',
@@ -228,10 +235,11 @@ export const cmfData: CMFItem[] = [
   {
     id: 'mat-tpe',
     type: 'Material',
-    name: 'TPE',
+    category: '塑料',
+    name: 'TPE(热塑性弹性体)',
     nameEn: 'Thermoplastic Elastomer',
     description: '热塑性弹性体。兼具橡胶的弹性和塑料的加工性。',
-    image: 'https://picsum.photos/seed/tpe-rubber/800/600',
+    image: 'https://picsum.photos/seed/tpe-elastomer-soft/800/600',
     tags: ['弹性', '软触感', '包胶'],
     properties: {
       density: '0.90–1.20 g/cm³',
@@ -256,6 +264,198 @@ export const cmfData: CMFItem[] = [
       { name: '金发', grade: 'TPE-SEBS', features: '通用级' }
     ],
     alternatives: ['TPU', '硅胶']
+  },
+
+  // METALS
+  {
+    id: 'mat-aluminum',
+    type: 'Material',
+    category: '金属',
+    name: '铝合金',
+    nameEn: 'Aluminum Alloy',
+    description: '轻质、高强度、耐腐蚀。广泛应用于航空、汽车及电子产品外壳。',
+    image: 'https://picsum.photos/seed/aluminum-alloy/800/600',
+    tags: ['轻质', '导热', '易加工'],
+    properties: {
+      density: '2.7 g/cm³',
+      hardness: 'HB 60–150',
+      tensileStrength: '150–600 MPa'
+    },
+    appearance: '银白色金属光泽，表面可进行阳极氧化处理。',
+    processability: ['压铸', 'CNC', '挤压', '冲压', '阳极氧化'],
+    cost: { material: '15–25 元/kg', tooling: '高', unit: '中等' }
+  },
+  {
+    id: 'mat-stainless-steel',
+    type: 'Material',
+    category: '金属',
+    name: '不锈钢',
+    nameEn: 'Stainless Steel',
+    description: '具有优异的耐腐蚀性、耐热性和机械强度。',
+    image: 'https://picsum.photos/seed/stainless-steel/800/600',
+    tags: ['耐腐蚀', '高强度', '高端感'],
+    properties: {
+      density: '7.8–8.0 g/cm³',
+      hardness: 'HV 150–400',
+      tensileStrength: '500–1200 MPa'
+    },
+    appearance: '银灰色，可抛光至镜面或拉丝处理。',
+    processability: ['冲压', 'CNC', '激光切割', '焊接', '抛光'],
+    cost: { material: '20–60 元/kg', tooling: '高', unit: '中等' }
+  },
+  {
+    id: 'mat-iron',
+    type: 'Material',
+    category: '金属',
+    name: '铸铁',
+    nameEn: 'Cast Iron',
+    description: '含碳量较高的铁碳合金。具有优异的铸造性能、减震性和耐磨性。',
+    image: 'https://picsum.photos/seed/cast-iron-texture/800/600',
+    tags: ['耐磨', '减震', '高刚性'],
+    properties: {
+      density: '7.2–7.4 g/cm³',
+      hardness: 'HB 150–250',
+      tensileStrength: '150–400 MPa'
+    },
+    appearance: '深灰色，表面通常较粗糙，具有颗粒感。',
+    processability: ['砂型铸造', '精密铸造', '机械加工'],
+    cost: { material: '5–10 元/kg', tooling: '中等', unit: '低' }
+  },
+  {
+    id: 'mat-carbon-steel',
+    type: 'Material',
+    category: '金属',
+    name: '碳钢',
+    nameEn: 'Carbon Steel',
+    description: '含碳量在0.02%–2.11%之间的铁碳合金。强度高，加工性能好，成本低。',
+    image: 'https://picsum.photos/seed/carbon-steel-bar/800/600',
+    tags: ['高强度', '易焊接', '高性价比'],
+    properties: {
+      density: '7.85 g/cm³',
+      hardness: 'HB 120–200',
+      tensileStrength: '400–600 MPa'
+    },
+    appearance: '灰色，易生锈，通常需要表面涂装或电镀处理。',
+    processability: ['冲压', '折弯', '焊接', 'CNC', '表面涂装'],
+    cost: { material: '4–8 元/kg', tooling: '中等', unit: '低' }
+  },
+  {
+    id: 'mat-copper',
+    type: 'Material',
+    category: '金属',
+    name: '纯铜/红铜',
+    nameEn: 'Pure Copper',
+    description: '具有极佳的导电性、导热性和延展性。常用于散热器和高端装饰件。',
+    image: 'https://picsum.photos/seed/copper-plate/800/600',
+    tags: ['高导热', '导电', '独特色泽'],
+    properties: {
+      density: '8.96 g/cm³',
+      hardness: 'HB 40–100',
+      tensileStrength: '200–350 MPa'
+    },
+    appearance: '独特的紫红色金属光泽，随时间氧化会产生绿锈。',
+    processability: ['CNC', '锻造', '拉丝', '电镀', '焊接'],
+    cost: { material: '60–90 元/kg', tooling: '中等', unit: '高' }
+  },
+  {
+    id: 'mat-zinc-alloy',
+    type: 'Material',
+    category: '金属',
+    name: '锌合金',
+    nameEn: 'Zinc Alloy',
+    description: '以锌为基加入其他元素的合金。铸造性能极佳，易于压铸复杂形状。',
+    image: 'https://picsum.photos/seed/zinc-alloy-diecasting/800/600',
+    tags: ['易压铸', '高精度', '易电镀'],
+    properties: {
+      density: '6.6–6.7 g/cm³',
+      hardness: 'HB 80–100',
+      tensileStrength: '250–300 MPa'
+    },
+    appearance: '青白色金属光泽，表面非常平整，极适合电镀。',
+    processability: ['压铸', '电镀', '喷涂', 'CNC'],
+    cost: { material: '18–25 元/kg', tooling: '高', unit: '低' }
+  },
+  {
+    id: 'mat-magnesium-alloy',
+    type: 'Material',
+    category: '金属',
+    name: '镁合金',
+    nameEn: 'Magnesium Alloy',
+    description: '最轻的结构金属材料。比强度高，减震性好，电磁屏蔽性能优异。',
+    image: 'https://picsum.photos/seed/magnesium-alloy-part/800/600',
+    tags: ['极轻', '高比强度', '电磁屏蔽'],
+    properties: {
+      density: '1.74–1.85 g/cm³',
+      hardness: 'HB 60–80',
+      tensileStrength: '200–280 MPa'
+    },
+    appearance: '银白色，易氧化，必须进行表面保护处理（如微弧氧化）。',
+    processability: ['压铸', '半固态成型', 'CNC', '微弧氧化'],
+    cost: { material: '25–40 元/kg', tooling: '高', unit: '中等' }
+  },
+
+  // RUBBER
+  {
+    id: 'mat-silicone',
+    type: 'Material',
+    category: '橡胶',
+    name: '硅橡胶',
+    nameEn: 'Silicone Rubber',
+    description: '优异的耐高低温性能，生理惰性，手感极佳。',
+    image: 'https://picsum.photos/seed/silicone-rubber/800/600',
+    tags: ['耐温', '亲肤', '食品级'],
+    properties: {
+      density: '1.1–1.3 g/cm³',
+      hardness: '邵氏A 30–80'
+    },
+    appearance: '半透明或任意颜色，表面温润，防滑。',
+    processability: ['模压', '液态射出 (LSR)', '挤出'],
+    cost: { material: '40–120 元/kg', tooling: '中等', unit: '中等' }
+  },
+
+  // WOOD & PAPER
+  {
+    id: 'mat-walnut',
+    type: 'Material',
+    category: '木材和纸',
+    name: '胡桃木',
+    nameEn: 'Walnut Wood',
+    description: '高档硬木，纹理优美，色泽深沉，常用于高端家具和内饰。',
+    image: 'https://picsum.photos/seed/walnut-wood/800/600',
+    tags: ['天然', '高端', '纹理'],
+    appearance: '深褐色至黑褐色，纹理直或略交错。',
+    processability: ['切割', '雕刻', '打磨', '涂油'],
+    cost: { material: '高', tooling: '低', unit: '高' }
+  },
+
+  // GLASS & CERAMICS
+  {
+    id: 'mat-tempered-glass',
+    type: 'Material',
+    category: '玻璃陶瓷',
+    name: '钢化玻璃',
+    nameEn: 'Tempered Glass',
+    description: '通过热处理或化学处理提高强度的安全玻璃。',
+    image: 'https://picsum.photos/seed/tempered-glass/800/600',
+    tags: ['高强度', '透明', '安全'],
+    appearance: '极高透明度，表面平整坚硬。',
+    processability: ['切割 (预加工)', '钢化', '丝印', '镀膜'],
+    cost: { material: '中等', tooling: '中等', unit: '中等' }
+  },
+
+  // TEXTILES
+  {
+    id: 'mat-polyester',
+    type: 'Material',
+    category: '纺织面料',
+    name: '涤纶',
+    nameEn: 'Polyester',
+    description: '合成纤维，强度高，弹性好，耐磨性优良。',
+    image: 'https://picsum.photos/seed/polyester-fabric/800/600',
+    tags: ['耐磨', '易打理', '多色'],
+    appearance: '多种织纹，手感多样。',
+    processability: ['编织', '裁剪', '缝制', '热压'],
+    cost: { material: '低', tooling: '低', unit: '低' }
   },
 
   // COLORS (Synthesized from details.md requirements)

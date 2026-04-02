@@ -19,22 +19,26 @@ import { CMFItem, CMFType } from './types';
 
 export default function App() {
   const [activeCategory, setActiveCategory] = useState<CMFType | 'All' | 'Glossary'>('All');
+  const [activeSubCategory, setActiveSubCategory] = useState<string>('全部');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedItem, setSelectedItem] = useState<CMFItem | null>(null);
   const [isCompareModalOpen, setIsCompareModalOpen] = useState(false);
   const [compareList, setCompareList] = useState<CMFItem[]>([]);
   const [isCompareMode, setIsCompareMode] = useState(false);
 
+  const materialCategories = ['全部', '塑料', '金属', '橡胶', '木材和纸', '玻璃陶瓷', '纺织面料'];
+
   const filteredData = useMemo(() => {
     if (activeCategory === 'Glossary') return [];
     return cmfData.filter(item => {
       const matchesCategory = activeCategory === 'All' || item.type === activeCategory;
+      const matchesSubCategory = activeCategory !== 'Material' || activeSubCategory === '全部' || item.category === activeSubCategory;
       const matchesSearch = item.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
                            item.nameEn?.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-      return matchesCategory && matchesSearch;
+      return matchesCategory && matchesSubCategory && matchesSearch;
     });
-  }, [activeCategory, searchQuery]);
+  }, [activeCategory, activeSubCategory, searchQuery]);
 
   const toggleCompare = (item: CMFItem) => {
     if (compareList.find(i => i.id === item.id)) {
@@ -66,7 +70,10 @@ export default function App() {
           {(['All', 'Material', 'Color', 'Finish', 'Glossary'] as const).map((cat) => (
             <button
               key={cat}
-              onClick={() => setActiveCategory(cat)}
+              onClick={() => {
+                setActiveCategory(cat);
+                setActiveSubCategory('全部');
+              }}
               className={`text-sm font-medium transition-colors hover:text-ink ${activeCategory === cat ? 'text-ink' : 'text-ink/40'}`}
             >
               {cat === 'All' ? '全部' : cat === 'Material' ? '材料' : cat === 'Color' ? '色彩' : cat === 'Finish' ? '工艺' : '词典'}
@@ -118,6 +125,20 @@ export default function App() {
 
       {/* Main Content */}
       <main className="flex-1 px-6 py-12 max-w-7xl mx-auto w-full">
+        {activeCategory === 'Material' && (
+          <div className="flex flex-wrap gap-4 mb-12 border-b border-line pb-6">
+            {materialCategories.map(subCat => (
+              <button
+                key={subCat}
+                onClick={() => setActiveSubCategory(subCat)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${activeSubCategory === subCat ? 'bg-ink text-paper' : 'bg-ink/5 text-ink/60 hover:bg-ink/10'}`}
+              >
+                {subCat}
+              </button>
+            ))}
+          </div>
+        )}
+
         {activeCategory === 'Glossary' ? (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {glossary.map((item, idx) => (
