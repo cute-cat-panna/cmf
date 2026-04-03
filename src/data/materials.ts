@@ -68,6 +68,40 @@ export const materials: CMFItem[] = [
     alternatives: ['PMMA', 'PC/ABS合金']
   },
   {
+    id: 'mat-pp',
+    type: 'Material',
+    category: '塑料',
+    name: 'PP (聚丙烯)',
+    nameEn: 'Polypropylene',
+    description: '聚丙烯。低成本、易用的结晶热塑料，常被称为“塑料行业的钢铁”。具有极高的韧性，能抵抗霉菌、油脂、水和电。轻盈且柔韧，可弯曲而不断裂。聚丙烯不适合高温应用——它极易燃，且热膨胀系数特别高。此外，它容易受到氧化、紫外线降解、氯化溶剂和芳香族化合物的影响。',
+    image: 'https://sybridge.com/wp-content/uploads/2023/09/Polypropylene-Fillers-Listing-1024x683-1.jpg',
+    tags: ['低密度', '耐化学', '高韧性', '食品级'],
+    properties: {
+      density: '0.90–0.91 g/cm³',
+      hardness: '洛氏R 92',
+      tensileStrength: '33 MPa',
+      tensileModulus: '1344 MPa',
+      flexuralStrength: '48 MPa',
+      flexuralModulus: '1241 MPa',
+      heatDistortionTemp: '100–110 °C'
+    },
+    appearance: '半透明白色，具有蜡质感，表面光洁，易于着色。',
+    processability: ['注塑', '挤出', '吹塑', 'CNC加工'],
+    cost: { material: '8–15 元/kg', tooling: '中低', unit: '极低' },
+    sustainability: {
+      recycling: '100%可回收',
+      certification: ['RoHS', 'REACH', 'FDA'],
+      carbonFootprint: '约1.8 kg CO₂/kg'
+    },
+    suppliers: [
+      { name: '埃克森美孚', grade: 'ExxonMobil™ PP', features: '高性能均聚物' },
+      { name: '中石化', grade: 'PPH-T03', features: '通用级' },
+      { name: '陶氏', grade: 'DOW™ PP', features: '高透明级' }
+    ],
+    alternatives: ['PE', 'ABS', 'PVC']
+  },
+
+  {
     id: 'mat-pom',
     type: 'Material',
     category: '塑料',
@@ -411,6 +445,159 @@ export const materials: CMFItem[] = [
       { name: '科思创', grade: 'Bayblend®', features: '高耐热系列' }
     ],
     alternatives: ['PC', 'ABS', 'PC/PBT']
+  },
+  {
+    id: 'mat-epu40',
+    type: 'Material',
+    category: '塑料',
+    name: 'EPU 40 (弹性体聚氨酯)',
+    nameEn: 'Elastomeric Polyurethane 40',
+    description: 'Carbon DLS工艺开发的类橡胶材料。具有非线性材料响应，极高失效伸长率。EPU 40较软，非常适合需要阻尼、能量耗散和冲击吸收的应用。',
+    image: 'https://sybridge.com/wp-content/uploads/2023/06/EPU_Feature.jpg',
+    tags: ['高弹性', '阻尼', '吸震', '3D打印'],
+    properties: {
+      tensileStrength: '7.7 MPa',
+      elongation: '> 250%',
+      tearStrength: '23 kN/m',
+      stress50: '1.9 MPa',
+      stress100: '3.0 MPa',
+      hardness: 'Shore 68A'
+    },
+    appearance: '标准黑色，表面质感细腻，具有良好的触感。',
+    processability: ['Carbon DLS (CLIP)'],
+    cost: { material: '150–300 元/kg', tooling: '低 (无需模具)', unit: '高' },
+    sustainability: {
+      recycling: 'Carbon提供材料回收计划',
+      certification: ['RoHS', 'REACH'],
+      carbonFootprint: '约5.5 kg CO₂/kg'
+    },
+    suppliers: [
+      { name: 'Carbon', grade: 'EPU 40', features: '高性能弹性体' }
+    ],
+    alternatives: ['EPU 41', 'TPE', '硅胶']
+  },
+  {
+    id: 'mat-epu41',
+    type: 'Material',
+    category: '塑料',
+    name: 'EPU 41 (弹性体聚氨酯)',
+    nameEn: 'Elastomeric Polyurethane 41',
+    description: 'Carbon EPU家族的生产级弹性体。比EPU 40更刚，具有更高的能量回馈。适合需要“触感”或触觉反馈的接口应用。',
+    image: 'https://sybridge.com/wp-content/uploads/2023/06/EPU_40-1-1-1-768x521.jpg',
+    tags: ['高回弹', '生产级', '复杂晶格', '3D打印'],
+    properties: {
+      tensileStrength: '6.2 MPa',
+      elongation: '> 130%',
+      tearStrength: '20 kN/m',
+      stress50: '2.7 MPa',
+      stress100: '4.7 MPa',
+      hardness: 'Shore 73A'
+    },
+    appearance: '独特的亚麻绿色，表面更光滑，后期处理需求更少。',
+    processability: ['Carbon DLS (CLIP)'],
+    cost: { material: '180–350 元/kg', tooling: '低 (无需模具)', unit: '高' },
+    sustainability: {
+      recycling: 'Carbon提供材料回收计划',
+      certification: ['RoHS', 'REACH'],
+      carbonFootprint: '约5.8 kg CO₂/kg'
+    },
+    suppliers: [
+      { name: 'Carbon', grade: 'EPU 41', features: '高回弹生产级' }
+    ],
+    alternatives: ['EPU 40', 'TPU', '尼龙弹性体']
+  },
+  {
+    id: 'mat-pa12',
+    type: 'Material',
+    category: '塑料',
+    name: 'PA 12 (尼龙 12)',
+    nameEn: 'Polyamide 12 / Nylon 12',
+    description: '通用工程塑料，以韧性、高强度和耐疲劳性著称。广泛用于注塑和增材制造（MJF/FDM），是金属零件塑料化的理想选择。',
+    image: 'https://sybridge.com/wp-content/uploads/2023/05/PA12_Feature.jpg',
+    tags: ['高韧性', '耐疲劳', '尺寸稳定', '各向同性'],
+    properties: {
+      density: '1.01 g/cm³',
+      tensileStrength: '48 MPa',
+      tensileModulus: '1700–1800 MPa',
+      elongation: '20%',
+      impactStrength: '3.5 kJ/m²',
+      heatDistortionTemp: '175 °C (@0.45 MPa)'
+    },
+    appearance: 'MJF工艺通常为灰色或黑色，注塑可调色，表面略带颗粒感。',
+    processability: ['注塑', 'HP MJF', 'FDM', 'SLS'],
+    cost: { material: '15–40 元/kg', tooling: '中等', unit: '中等' },
+    sustainability: {
+      recycling: 'MJF粉末可实现80%回收利用',
+      certification: ['RoHS', 'REACH', 'FDA'],
+      carbonFootprint: '约4.2 kg CO₂/kg'
+    },
+    suppliers: [
+      { name: '惠普', grade: 'HP 3D High Reusability PA 12', features: '高回收率打印粉末' },
+      { name: '赢创', grade: 'VESTAMID®', features: '高性能注塑级' }
+    ],
+    alternatives: ['PA 6', 'PA 66', 'ABS']
+  },
+  {
+    id: 'mat-pla',
+    type: 'Material',
+    category: '塑料',
+    name: 'PLA (聚乳酸)',
+    nameEn: 'Polylactic Acid',
+    description: '生物基且可生物降解的热塑性聚酯。来源于玉米淀粉等可再生资源，是目前最环保的商业化塑料之一。',
+    image: 'https://sybridge.com/wp-content/uploads/2020/04/Bioplastics-Hero-2048x1438-1.jpg',
+    tags: ['生物基', '可降解', '低收缩', '环保'],
+    properties: {
+      density: '1.24 g/cm³',
+      tensileStrength: '50–70 MPa',
+      flexuralModulus: '3000–4000 MPa',
+      elongation: '3–5%',
+      heatDistortionTemp: '55 °C',
+      meltingPoint: '150–160 °C'
+    },
+    appearance: '高透明度，易于着色，表面光泽度高，但质地较脆。',
+    processability: ['3D打印 (FDM)', '热成型', '注塑'],
+    cost: { material: '12–25 元/kg', tooling: '低', unit: '低' },
+    sustainability: {
+      recycling: '可生物降解，工业堆肥下3个月内分解',
+      certification: ['FDA', 'EN 13432 (可降解认证)'],
+      carbonFootprint: '约0.5 kg CO₂/kg (碳中和潜力)'
+    },
+    suppliers: [
+      { name: 'NatureWorks', grade: 'Ingeo™', features: '全球领先的PLA品牌' },
+      { name: '海正生物', grade: 'REVODE', features: '国产高性能牌号' }
+    ],
+    alternatives: ['PHA', 'PETG', 'PBS']
+  },
+  {
+    id: 'mat-pet',
+    type: 'Material',
+    category: '塑料',
+    name: 'PET (聚对苯二甲酸乙二醇酯)',
+    nameEn: 'Polyethylene Terephthalate',
+    description: '全球回收率最高的塑料。轻质、坚固、透明且防碎，具有优异的气体阻隔性能，是食品包装的首选材料。',
+    image: 'https://sybridge.com/wp-content/uploads/2023/06/PET-Water-Bottles-Blue-Row.jpg',
+    tags: ['高回收', '食品级', '透明', '阻隔性'],
+    properties: {
+      density: '1.38 g/cm³',
+      tensileStrength: '79 MPa',
+      flexuralModulus: '2758 MPa',
+      elongation: '70%',
+      hardness: 'Shore D 87',
+      meltingPoint: '250–260 °C'
+    },
+    appearance: '极高透明度，表面坚硬耐磨，质感接近玻璃。',
+    processability: ['吹塑', '注塑', '挤出', '热成型'],
+    cost: { material: '8–12 元/kg', tooling: '中等', unit: '极低' },
+    sustainability: {
+      recycling: '100%可回收 (回收标志 #1)',
+      certification: ['FDA', 'RoHS'],
+      carbonFootprint: '约2.2 kg CO₂/kg'
+    },
+    suppliers: [
+      { name: '杜邦', grade: 'Rynite®', features: '高性能工程级' },
+      { name: '远东新世纪', grade: 'PET Resin', features: '包装级龙头' }
+    ],
+    alternatives: ['PBT', 'PP', '玻璃']
   },
   {
     id: 'mat-az91d',

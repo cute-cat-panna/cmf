@@ -53,7 +53,10 @@ export default function App() {
     glassTransitionTemp: '玻璃化转变温度',
     compressiveStrength: '抗压强度',
     tensileModulus: '拉伸模量',
-    flexuralStrength: '弯曲强度'
+    flexuralStrength: '弯曲强度',
+    tearStrength: '撕裂强度',
+    stress50: '50%定伸应力',
+    stress100: '100%定伸应力'
   };
 
   const filteredData = useMemo(() => {

@@ -37,6 +37,9 @@ export interface CMFItem {
     compressiveStrength?: string;
     tensileModulus?: string;
     flexuralStrength?: string;
+    tearStrength?: string;
+    stress50?: string;
+    stress100?: string;
   };
   appearance?: string;
   processability?: string[];
