@@ -18,6 +18,17 @@ export interface CMFItem {
     flexuralModulus?: string;
     impactStrength?: string;
     heatDistortionTemp?: string;
+    thermalExpansion?: string;
+    thermalConductivity?: string;
+    meltingPoint?: string;
+    yieldStrength?: string;
+    elongation?: string;
+    corrosionResistance?: string;
+    adhesion?: string;
+    pencilHardness?: string;
+    glossRange?: string;
+    colorDeltaE?: string;
+    contactAngle?: string;
   };
   appearance?: string;
   processability?: string[];
@@ -29,7 +40,7 @@ export interface CMFItem {
   sustainability?: {
     recycling: string;
     certification: string[];
-    carbonFootprint: string;
+    carbonFootprint?: string;
   };
   suppliers?: {
     name: string;

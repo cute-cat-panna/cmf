@@ -14,7 +14,7 @@ import {
   DollarSign,
   Activity
 } from 'lucide-react';
-import { cmfData } from './data';
+import { cmfData, glossary } from './data';
 import { CMFItem, CMFType } from './types';
 
 export default function App() {
@@ -27,6 +27,26 @@ export default function App() {
   const [isCompareMode, setIsCompareMode] = useState(false);
 
   const materialCategories = ['全部', '塑料', '金属', '橡胶', '木材和纸', '玻璃陶瓷', '纺织面料'];
+
+  const propertyLabels: Record<string, string> = {
+    density: '密度',
+    hardness: '硬度',
+    tensileStrength: '抗拉强度',
+    yieldStrength: '屈服强度',
+    elongation: '断后延伸率',
+    flexuralModulus: '弯曲模量',
+    impactStrength: '冲击强度',
+    heatDistortionTemp: '热变形温度',
+    thermalExpansion: '热膨胀系数',
+    thermalConductivity: '导热系数',
+    meltingPoint: '熔点',
+    corrosionResistance: '核心耐蚀特性',
+    adhesion: '镀层/涂层百格附着力',
+    pencilHardness: '耐刮擦铅笔硬度',
+    glossRange: '量产可实现光泽度范围',
+    colorDeltaE: '量产批次色差管控标准',
+    contactAngle: '抗指纹疏水接触角'
+  };
 
   const filteredData = useMemo(() => {
     if (activeCategory === 'Glossary') return [];
@@ -47,15 +67,6 @@ export default function App() {
       setCompareList([...compareList, item]);
     }
   };
-
-  const glossary = [
-    { term: 'CMF', definition: 'Color (色彩), Material (材料), Finish (工艺) 的缩写。是产品设计中决定视觉与触觉质感的核心领域。' },
-    { term: 'ΔE (色差)', definition: '衡量两种颜色之间差异的数值。通常 ΔE < 1.0 被认为是人眼不可见的差异。' },
-    { term: '注塑 (Injection Molding)', definition: '将熔融塑料注入模具腔内，冷却固化后获得制品的加工方法。' },
-    { term: '阳极氧化 (Anodizing)', definition: '铝及其合金在电解液中通过外加电流形成氧化膜的过程。' },
-    { term: 'PVD (真空镀)', definition: '在真空条件下，采用物理方法将材料源气化成原子或分子，沉积在基材表面。' },
-    { term: '洛氏硬度 (Rockwell Hardness)', definition: '通过压头压入深度来衡量材料硬度的一种标准。' },
-  ];
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -113,7 +124,7 @@ export default function App() {
               <span className="text-xs font-mono uppercase tracking-widest text-ink/40 mb-4 block">Industrial Design Resource</span>
               <h1 className="text-6xl md:text-8xl font-display font-bold leading-[0.9] mb-8">
                 CMF <br /> 
-                <span className="text-ink/20 italic">ENCYCLOPEDIA</span>
+                <span className="text-ink/20 italic">设计师手册</span>
               </h1>
               <p className="max-w-xl text-lg text-ink/60 leading-relaxed">
                 一个专业、易用的 CMF（色彩、材料、工艺）手册展示网站，专为工业设计、产品设计从业者打造。
@@ -143,14 +154,29 @@ export default function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {glossary.map((item, idx) => (
               <motion.div 
-                key={item.term}
+                key={item.id}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: idx * 0.1 }}
-                className="p-8 bg-white rounded-3xl border border-line"
+                className="p-8 bg-white rounded-3xl border border-line flex flex-col sm:flex-row gap-6"
               >
-                <h3 className="text-xl font-display font-bold mb-3">{item.term}</h3>
-                <p className="text-ink/60 leading-relaxed">{item.definition}</p>
+                {item.image && (
+                  <div className="w-full sm:w-32 h-32 shrink-0 rounded-2xl overflow-hidden bg-ink/5">
+                    <img src={item.image} alt={item.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                  </div>
+                )}
+                <div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <h3 className="text-xl font-display font-bold">{item.name}</h3>
+                    {item.nameEn && <span className="text-xs font-mono text-ink/30">{item.nameEn}</span>}
+                  </div>
+                  <p className="text-ink/60 leading-relaxed text-sm mb-4">{item.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {item.tags.map(tag => (
+                      <span key={tag} className="text-[10px] font-bold uppercase tracking-wider px-2 py-1 bg-ink/5 rounded-md text-ink/40">{tag}</span>
+                    ))}
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -286,7 +312,7 @@ export default function App() {
                         <div className="grid grid-cols-2 gap-4">
                           {Object.entries(item.properties || {}).map(([key, value]) => (
                             <div key={key} className="bg-white/5 p-4 rounded-xl">
-                              <p className="text-[10px] uppercase text-paper/40 mb-1">{key}</p>
+                              <p className="text-[10px] uppercase text-paper/40 mb-1">{propertyLabels[key] || key}</p>
                               <p className="font-mono text-sm">{value}</p>
                             </div>
                           ))}
@@ -401,11 +427,7 @@ export default function App() {
                         {Object.entries(selectedItem.properties || {}).map(([key, value]) => (
                           <div key={key} className="border-b border-line pb-2">
                             <p className="text-[10px] uppercase text-ink/40 mb-1">
-                              {key === 'density' ? '密度' : 
-                               key === 'hardness' ? '硬度' : 
-                               key === 'tensileStrength' ? '拉伸强度' : 
-                               key === 'flexuralModulus' ? '弯曲模量' : 
-                               key === 'impactStrength' ? '冲击强度' : '热变形温度'}
+                              {propertyLabels[key] || key}
                             </p>
                             <p className="font-mono text-sm font-medium">{value}</p>
                           </div>
