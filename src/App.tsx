@@ -12,7 +12,8 @@ import {
   ExternalLink,
   Leaf,
   DollarSign,
-  Activity
+  Activity,
+  Github
 } from 'lucide-react';
 import { cmfData, glossary } from './data';
 import { CMFItem, CMFType } from './types';
@@ -293,8 +294,19 @@ export default function App() {
       </AnimatePresence>
 
       {/* Footer */}
-      <footer className="px-6 py-12 border-t border-line text-center">
-        <p className="text-xs text-ink/30 font-mono">© 2026 CMF MANUAL. BUILT FOR INDUSTRIAL DESIGNERS.</p>
+      <footer className="px-6 py-12 border-t border-line text-center flex flex-col items-center gap-4">
+        <div className="flex items-center gap-6">
+          <a 
+            href="https://github.com/cute-cat-panna/cmf" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-ink/40 hover:text-ink transition-colors flex items-center gap-2 text-sm font-medium"
+          >
+            <Github className="w-4 h-4" />
+            <span>GitHub</span>
+          </a>
+        </div>
+        <p className="text-xs text-ink/30 font-mono">© 2026 CMF MANUAL. BUILT FOR MICHAEL·PARNNA.</p>
       </footer>
 
       {/* Comparison Modal */}
