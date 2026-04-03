@@ -1,6 +1,6 @@
 
 # 📘 CMF设计师手册 | cmf.parnna.site 项目介绍
-<img src="[https://s41.ax1x.com/2026/04/03/peYgnpD.jpg](https://s41.ax1x.com/2026/04/03/peYgnpD.jpg)](https://s41.ax1x.com/2026/04/03/peYgnpD.jpg)"></a>
+<img src="https://s41.ax1x.com/2026/04/03/peYgnpD.jpg">
 ## 项目概述
 **CMF设计师手册**（`cmf.parnna.site`）是一个专为色彩（Color）、材料（Material）与表面处理工艺（Finish）设计师打造的**专业参考平台**。项目致力于将碎片化的CMF专业知识系统化、可视化、可检索化，为设计决策提供高效、可靠的数字化支持。
 
