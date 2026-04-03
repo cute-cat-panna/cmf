@@ -854,21 +854,232 @@ export const materials: CMFItem[] = [
     alternatives: ['410 不锈钢', '416 不锈钢', '304 不锈钢', '17-4PH 不锈钢']
   },
   {
-    id: 'mat-silicone',
+    id: 'mat-nbr',
     type: 'Material',
     category: '橡胶',
-    name: '硅橡胶',
-    nameEn: 'Silicone Rubber',
-    description: '优异的耐高低温性能，生理惰性，手感极佳。',
-    image: 'https://picsum.photos/seed/silicone-rubber/800/600',
-    tags: ['耐温', '亲肤', '食品级'],
+    name: '丁腈橡胶 (NBR)',
+    nameEn: 'Nitrile Butadiene Rubber (NBR)',
+    description: '合成橡胶经典耐油牌号，由丁二烯与丙烯腈共聚而成，丙烯腈含量越高耐油性越好、弹性越低，具备优异的耐磨、耐溶剂与气密性，手感偏韧，是CMF设计中手柄、密封件、耐油装饰件的核心用材。',
+    image: 'https://picsum.photos/seed/800/600',
+    tags: ['耐油橡胶', '耐磨', '气密性', '手柄', '密封件', '工业设备'],
     properties: {
-      density: '1.1–1.3 g/cm³',
-      hardness: '邵氏A 30–80'
+      density: '0.95–1.05 g/cm³',
+      hardness: '邵氏A 50–90（常用70–80）',
+      tensileStrength: '10–25 MPa',
+      elongation: '300–600%',
+      thermalExpansion: '180–220 x 10⁻⁶ /°C',
+      thermalConductivity: '0.25–0.30 W/m·K',
+      corrosionResistance: '优异的耐矿物油、耐燃油、耐溶剂性能，耐候性一般，不耐臭氧',
+      adhesion: '0级 (ISO 2409 / ASTM D3359，表面处理后)',
+      glossRange: '10–60 GU (取决于表面处理工艺)',
+      colorDeltaE: 'ΔE*ab ≤ 2.0 (量产批次)',
+      contactAngle: '90°–105°'
     },
-    appearance: '半透明或任意颜色，表面温润，防滑。',
-    processability: ['模压', '液态射出 (LSR)', '挤出'],
-    cost: { material: '40–120 元/kg', tooling: '中等', unit: '中等' }
+    appearance: '本色为淡黄色至棕褐色，量产常用黑色或通过色母粒实现彩色，表面可呈光滑或哑光质感，手感偏韧有弹性，可通过咬花、压纹实现防滑纹理。',
+    processability: ['模压成型', '注塑成型', '挤出成型', '压延', '表面喷涂', '丝印', '压纹', '激光雕刻'],
+    cost: { material: '15–25 元/kg（2026年国内市场均价，普通级）', tooling: '中等', unit: '中等偏低' },
+    sustainability: {
+      recycling: '工业回收难度大，以焚烧发电为主，部分可通过脱硫再利用',
+      certification: ['RoHS', 'REACH'],
+      carbonFootprint: '约3.0–4.0 kg CO₂/kg'
+    },
+    suppliers: [
+      { name: '朗盛化学', grade: 'Perbunan® NBR', features: '外资品牌，耐油等级齐全，性能稳定' },
+      { name: '中石化齐鲁石化', grade: 'NBR 2907', features: '国内龙头，通用级耐油橡胶，成本优势突出' },
+      { name: '阿朗新科', grade: 'Krynac® NBR', features: '高丙烯腈含量，耐溶剂性能优异' },
+      { name: '宁波顺泽', grade: 'NBR 3350', features: '挤出级专用，表面质量高' }
+    ],
+    alternatives: ['氯丁橡胶 (CR)', '三元乙丙橡胶 (EPDM)', '热塑性弹性体 (TPE)', '聚氨酯 (PU)']
+  },
+  {
+    id: 'mat-vmq',
+    type: 'Material',
+    category: '橡胶',
+    name: '硅橡胶 (VMQ)',
+    nameEn: 'Silicone Rubber (VMQ)',
+    description: 'CMF设计“明星橡胶”，由硅氧键主链构成，耐高低温性能极优异（-60~230℃），耐候耐臭氧、耐老化，手感细腻亲肤，食品级/医疗级认证齐全，可实现半透明、彩色、荧光等多样化外观，是穿戴、3C、家电、母婴产品的首选软触感材料。',
+    image: 'https://picsum.photos/seed/800/600',
+    tags: ['硅橡胶', '软触感', '耐高低温', '食品级', '医疗级', '穿戴产品', '3C电子'],
+    properties: {
+      density: '1.10–1.30 g/cm³',
+      hardness: '邵氏A 30–80（常用40–60）',
+      tensileStrength: '5–15 MPa',
+      elongation: '300–800%',
+      thermalExpansion: '250–300 x 10⁻⁶ /°C',
+      thermalConductivity: '0.20–0.40 W/m·K（导热硅橡胶可达1.0–5.0 W/m·K）',
+      corrosionResistance: '优异的耐候、耐臭氧、耐紫外线老化性能，耐极性溶剂一般，不耐强酸强碱',
+      adhesion: '0级 (ISO 2409 / ASTM D3359，表面等离子处理后)',
+      glossRange: '5–80 GU (取决于表面处理工艺)',
+      colorDeltaE: 'ΔE*ab ≤ 1.5 (量产批次)',
+      contactAngle: '100°–115° (AF处理后)'
+    },
+    appearance: '本色为半透明至乳白色，可通过色母粒实现高饱和度彩色、马卡龙色、荧光色、夜光效果，表面可呈细腻光滑、哑光、磨砂或压纹质感，亲肤不粘灰，触感温润。',
+    processability: ['模压成型', '注塑成型 (LSR液态硅胶)', '挤出成型', '压延', '表面喷涂', '丝印', '镭雕', '压纹', '等离子处理'],
+    cost: { material: '20–40 元/kg（2026年国内市场均价，普通食品级）；80–150 元/kg（医疗级/LSR）', tooling: '中等偏高（LSR需专用模具）', unit: '中等' },
+    sustainability: {
+      recycling: '工业回收难度大，可通过裂解回收硅氧烷单体，部分可焚烧发电',
+      certification: ['RoHS', 'REACH', 'FDA (食品接触)', 'ISO 10993 (生物相容)'],
+      carbonFootprint: '约5.0–7.0 kg CO₂/kg'
+    },
+    suppliers: [
+      { name: '陶熙 (原道康宁)', grade: 'Dow Silicones®', features: '外资品牌，食品/医疗级认证齐全，LSR技术领先' },
+      { name: '信越化学', grade: 'KE-系列', features: '高端硅橡胶龙头，耐高低温性能突出' },
+      { name: '合盛硅业', grade: 'HS-系列', features: '国内硅基材料龙头，通用级成本优势突出' },
+      { name: '新安化工', grade: 'XinAn Silicone', features: '全产业链覆盖，挤出/模压级齐全' }
+    ],
+    alternatives: ['热塑性弹性体 (TPE)', '聚氨酯 (PU)', '三元乙丙橡胶 (EPDM)', '氟硅橡胶 (FVMQ)']
+  },
+  {
+    id: 'mat-epdm',
+    type: 'Material',
+    category: '橡胶',
+    name: '三元乙丙橡胶 (EPDM)',
+    nameEn: 'Ethylene Propylene Diene Monomer Rubber (EPDM)',
+    description: '户外耐候橡胶首选，由乙烯、丙烯与少量二烯烃共聚而成，主链无双键，耐臭氧、耐紫外线、耐老化性能极优异，长期户外使用不开裂，弹性好、绝缘性佳，是户外产品密封、把手、装饰条的核心用材。',
+    image: 'https://picsum.photos/seed/800/600',
+    tags: ['耐候橡胶', '耐臭氧', '耐老化', '户外产品', '密封件', '装饰条', '绝缘'],
+    properties: {
+      density: '0.86–0.92 g/cm³',
+      hardness: '邵氏A 50–90（常用60–70）',
+      tensileStrength: '10–20 MPa',
+      elongation: '300–600%',
+      thermalExpansion: '200–250 x 10⁻⁶ /°C',
+      thermalConductivity: '0.20–0.30 W/m·K',
+      corrosionResistance: '极优异的耐候、耐臭氧、耐紫外线老化性能，耐极性溶剂、耐酸碱，耐油性差',
+      adhesion: '0级 (ISO 2409 / ASTM D3359，表面处理后)',
+      glossRange: '10–50 GU (取决于表面处理工艺)',
+      colorDeltaE: 'ΔE*ab ≤ 2.0 (量产批次)',
+      contactAngle: '95°–105°'
+    },
+    appearance: '本色为乳白色至淡黄色，量产常用黑色或通过色母粒实现彩色，表面可呈哑光或半光滑质感，弹性好，可通过挤出实现复杂截面装饰条，压纹实现防滑效果。',
+    processability: ['模压成型', '注塑成型', '挤出成型', '压延', '表面喷涂', '丝印', '压纹', '激光雕刻'],
+    cost: { material: '12–20 元/kg（2026年国内市场均价，普通级）', tooling: '中等', unit: '中等偏低' },
+    sustainability: {
+      recycling: '工业回收难度大，以焚烧发电为主',
+      certification: ['RoHS', 'REACH', 'FDA (食品接触，部分牌号)'],
+      carbonFootprint: '约2.5–3.5 kg CO₂/kg'
+    },
+    suppliers: [
+      { name: '陶氏化学', grade: 'Nordel™ EPDM', features: '外资品牌，耐候等级齐全，性能稳定' },
+      { name: '埃克森美孚', grade: 'Vistalon™ EPDM', features: '高乙烯含量，强度与弹性平衡优异' },
+      { name: '中石化燕山石化', grade: 'EPDM 3092', features: '国内龙头，通用级耐候橡胶，成本优势突出' },
+      { name: '朗盛化学', grade: 'Keltan® EPDM', features: '挤出级专用，表面质量高' }
+    ],
+    alternatives: ['硅橡胶 (VMQ)', '氯丁橡胶 (CR)', '热塑性弹性体 (TPE)', '丁苯橡胶 (SBR)']
+  },
+  {
+    id: 'mat-nr',
+    type: 'Material',
+    category: '橡胶',
+    name: '天然橡胶 (NR)',
+    nameEn: 'Natural Rubber (NR)',
+    description: '传统高弹性橡胶，由三叶橡胶树分泌的胶乳加工而成，主链为顺式聚异戊二烯，弹性极高、耐磨性能优异、抗撕裂强度好，手感偏弹，是鞋底、减震件、运动器材的经典用材。',
+    image: 'https://picsum.photos/seed/800/600',
+    tags: ['天然橡胶', '高弹性', '耐磨', '减震', '鞋底', '运动器材'],
+    properties: {
+      density: '0.91–0.93 g/cm³',
+      hardness: '邵氏A 40–90（常用50–70）',
+      tensileStrength: '20–30 MPa',
+      elongation: '500–800%',
+      thermalExpansion: '180–220 x 10⁻⁶ /°C',
+      thermalConductivity: '0.20–0.30 W/m·K',
+      corrosionResistance: '优异的弹性、耐磨、抗撕裂性能，耐候性一般，不耐臭氧、不耐油、不耐酸碱',
+      adhesion: '0级 (ISO 2409 / ASTM D3359，表面处理后)',
+      glossRange: '10–50 GU (取决于表面处理工艺)',
+      colorDeltaE: 'ΔE*ab ≤ 2.0 (量产批次)',
+      contactAngle: '90°–100°'
+    },
+    appearance: '本色为淡黄色半透明，量产常用黑色或通过炭黑/色母粒实现彩色，表面可呈光滑、哑光或压纹质感，弹性极佳，触感偏弹有韧性。',
+    processability: ['模压成型', '压延成型', '挤出成型', '注塑成型', '表面喷涂', '丝印', '压纹', '激光雕刻'],
+    cost: { material: '10–15 元/kg（2026年国内市场均价，天然胶乳/干胶）', tooling: '低', unit: '低' },
+    sustainability: {
+      recycling: '可生物降解（自然环境下缓慢降解），工业回收以翻新为主，部分可通过脱硫再利用',
+      certification: ['RoHS', 'REACH'],
+      carbonFootprint: '约1.0–2.0 kg CO₂/kg（天然种植胶，含碳汇）'
+    },
+    suppliers: [
+      { name: '海南橡胶', grade: 'SCR WF (全乳胶)', features: '国内天然橡胶龙头，海南产区，品质稳定' },
+      { name: '云南农垦', grade: 'SCR 5 (标准胶)', features: '云南产区，耐磨性能突出' },
+      { name: '泰国正大', grade: 'STR 20', features: '泰国进口，通用级天然橡胶' },
+      { name: '马来西亚橡胶局', grade: 'SMR 20', features: '马来西亚进口，品质均匀' }
+    ],
+    alternatives: ['丁苯橡胶 (SBR)', '顺丁橡胶 (BR)', '热塑性弹性体 (TPE)', '聚氨酯 (PU)']
+  },
+  {
+    id: 'mat-cr',
+    type: 'Material',
+    category: '橡胶',
+    name: '氯丁橡胶 (CR)',
+    nameEn: 'Chloroprene Rubber (CR)',
+    description: '综合性能均衡的耐候耐油橡胶，由氯丁二烯聚合而成，主链含氯原子，耐候、耐臭氧、耐油、阻燃性能均优异，弹性好、粘结性佳，是密封件、电缆护套、胶粘剂的常用材料。',
+    image: 'https://picsum.photos/seed/800/600',
+    tags: ['氯丁橡胶', '耐候', '耐油', '阻燃', '密封件', '电缆护套', '胶粘剂'],
+    properties: {
+      density: '1.23–1.28 g/cm³',
+      hardness: '邵氏A 50–90（常用60–80）',
+      tensileStrength: '15–25 MPa',
+      elongation: '400–600%',
+      thermalExpansion: '180–220 x 10⁻⁶ /°C',
+      thermalConductivity: '0.25–0.35 W/m·K',
+      corrosionResistance: '均衡的耐候、耐臭氧、耐油、耐溶剂性能，阻燃性优异（离火自熄），耐强酸强碱一般',
+      adhesion: '0级 (ISO 2409 / ASTM D3359，表面处理后)',
+      glossRange: '10–50 GU (取决于表面处理工艺)',
+      colorDeltaE: 'ΔE*ab ≤ 2.0 (量产批次)',
+      contactAngle: '95°–105°'
+    },
+    appearance: '本色为淡黄色至棕褐色，量产常用黑色，表面可呈光滑或哑光质感，弹性好，粘结性佳，可通过压纹实现防滑效果。',
+    processability: ['模压成型', '注塑成型', '挤出成型', '压延', '表面喷涂', '丝印', '压纹', '激光雕刻'],
+    cost: { material: '20–30 元/kg（2026年国内市场均价，普通级）', tooling: '中等', unit: '中等' },
+    sustainability: {
+      recycling: '工业回收难度大，以焚烧发电为主',
+      certification: ['RoHS', 'REACH'],
+      carbonFootprint: '约3.5–4.5 kg CO₂/kg'
+    },
+    suppliers: [
+      { name: '朗盛化学', grade: 'Baypren® CR', features: '外资品牌，耐候耐油等级齐全' },
+      { name: '中石化重庆长寿', grade: 'CR 232', features: '国内龙头，通用级氯丁橡胶，成本优势突出' },
+      { name: 'Denka', grade: 'Denka Chloroprene', features: '日本进口，粘结性能优异' },
+      { name: '山西合成橡胶', grade: 'CR 121', features: '挤出级专用，表面质量高' }
+    ],
+    alternatives: ['丁腈橡胶 (NBR)', '三元乙丙橡胶 (EPDM)', '氯磺化聚乙烯 (CSM)', '热塑性弹性体 (TPE)']
+  },
+  {
+    id: 'mat-fkm',
+    type: 'Material',
+    category: '橡胶',
+    name: '氟橡胶 (FKM)',
+    nameEn: 'Fluoroelastomer (FKM)',
+    description: '高端耐化学耐高温橡胶，主链含氟原子，化学稳定性极优异，耐强酸强碱、耐有机溶剂、耐高温（-20~250℃），是化工、航空航天、高端汽车密封件的核心用材，CMF设计中用于极端环境下的功能装饰件。',
+    image: 'https://picsum.photos/seed/800/600',
+    tags: ['氟橡胶', '耐化学', '耐高温', '高端密封', '化工', '航空航天'],
+    properties: {
+      density: '1.80–2.00 g/cm³',
+      hardness: '邵氏A 70–90（常用75–85）',
+      tensileStrength: '10–20 MPa',
+      elongation: '200–400%',
+      thermalExpansion: '150–200 x 10⁻⁶ /°C',
+      thermalConductivity: '0.25–0.35 W/m·K',
+      corrosionResistance: '极优异的耐强酸强碱、耐有机溶剂、耐燃油性能，耐高温耐候，弹性一般',
+      adhesion: '0级 (ISO 2409 / ASTM D3359，表面等离子处理后)',
+      glossRange: '10–40 GU (取决于表面处理工艺)',
+      colorDeltaE: 'ΔE*ab ≤ 2.0 (量产批次)',
+      contactAngle: '105°–115°'
+    },
+    appearance: '本色为黑色或棕色，表面可呈光滑或半哑光质感，手感偏硬偏韧，可通过模压实现复杂结构件。',
+    processability: ['模压成型', '注塑成型', '挤出成型', '表面喷涂', '激光雕刻', '等离子处理'],
+    cost: { material: '150–300 元/kg（2026年国内市场均价，普通级）；300–600 元/kg（高端牌号）', tooling: '高', unit: '高' },
+    sustainability: {
+      recycling: '工业回收难度极大，以专业焚烧处理为主',
+      certification: ['RoHS', 'REACH', 'FDA (食品接触，部分牌号)'],
+      carbonFootprint: '约10–15 kg CO₂/kg'
+    },
+    suppliers: [
+      { name: '大金化学', grade: 'Daikin DAI-EL®', features: '外资品牌，耐化学等级齐全，性能稳定' },
+      { name: '3M', grade: '3M™ Dyneon™', features: '高端氟橡胶龙头，耐高温性能突出' },
+      { name: '中昊晨光', grade: 'FKM 26', features: '国内龙头，通用级氟橡胶，成本优势突出' },
+      { name: '东岳集团', grade: 'FKM 246', features: '挤出/模压级齐全' }
+    ],
+    alternatives: ['氟硅橡胶 (FVMQ)', '全氟醚橡胶 (FFKM)', '聚四氟乙烯 (PTFE)', '丁腈橡胶 (NBR)']
   },
   {
     id: 'mat-walnut',
