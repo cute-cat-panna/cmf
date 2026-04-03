@@ -1,53 +1,20 @@
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
 
-# 📘 CMF设计师手册 | cmf.parnna.site 项目介绍
-<img src="https://s41.ax1x.com/2026/04/03/peYgnpD.jpg">
-## 项目概述
-**CMF设计师手册**（`cmf.parnna.site`）是一个专为色彩（Color）、材料（Material）与表面处理工艺（Finish）设计师打造的**专业参考平台**。项目致力于将碎片化的CMF专业知识系统化、可视化、可检索化，为设计决策提供高效、可靠的数字化支持。
+# Run and deploy your AI Studio app
 
-## 目标用户
-- CMF设计师 / 产品设计师 / 工业设计师
-- 供应链工程师 / 采购与品控人员
-- 设计院校师生 / 行业研究者
-- 对新材料与新工艺感兴趣的产品研发团队
+This contains everything you need to run your app locally.
 
-##  核心功能
--  **结构化知识体系**：按色彩体系、基材特性、表面处理工艺、环保标准等维度分类，构建完整的CMF知识图谱。
--  **智能检索与标签系统**：支持多维度组合筛选（如：耐刮擦+哑光+可回收），定位目标参数。
--  **可视化材质/色卡库**：高清纹理预览、标准色值对照、工艺参数与适用场景一目了然。
--  **材质对比**：快速对比不同材质与色彩，帮助设计师精准判断
--  **全端响应式设计**：桌面端深度阅读 + 移动端快速查阅，适配设计现场与工厂巡检场景。
+View your app in AI Studio: https://ai.studio/apps/10c6bd00-a611-4fab-97d9-cd1d04b96c86
 
-## 🛠 技术架构
+## Run Locally
 
-- **前端框架**：Vue 3 / React / Next.js + TypeScript
-- **样式方案**：Tailwind CSS / GSAP
-- **构建部署**：Vercel / 静态托管 + CDN 加速 + DNS优化
-- **性能指标**：Lighthouse Performance 90+，首屏加载 < 1.5s
+**Prerequisites:**  Node.js
 
-##  设计理念
-- **专业优先**：剔除冗余装饰，以“信息密度与可读性”为核心设计准则，让数据自己说话。
-- **标准化输出**：统一术语、参数格式与计量单位，降低跨部门沟通歧义与打样试错成本。
-- **可持续导向**：内置环保材料评级、可回收工艺指南与碳足迹参考，助力绿色设计实践。
-- **开箱即用**：核心内容免登录查阅，支持快捷导出与离线缓存，贴合高频工作流。
 
-##  解决的行业痛点
-| 传统痛点 | 平台解决方案 |
-|---|---|
-| CMF知识分散在PDF/样品册/个人笔记中 | 集中化数字知识库，支持全文与多维检索 |
-| 工艺参数不透明，供应商沟通成本高 | 标准化工艺清单+兼容性/适用场景说明 |
-| 趋势信息滞后，缺乏系统追踪机制 | 定期更新趋势模块与真实落地案例库 |
-| 团队内部CMF标准不统一 | 提供可共享的参考链接、导出格式与版本记录 |
-
-##  未来规划
-- [ ] 用户投稿与社区协作机制（含内容审核流）
-- [ ] 开放 API 与设计软件插件（Figma / Keyshot / SolidWorks 集成）
-- [ ] 多语言支持（中/英/日/韩）与 WCAG 无障碍访问优化
-
-##  访问与反馈
-🌐 **在线体验**：[https://cmf.parnna.site](https://cmf.parnna.site)  
-📩 **意见反馈**：暂时在www.parnna.site网站反馈
-📦 **开源/协作**：欢迎大家积极补充代码和最新数据！
-
----
->  *免责声明：本平台所有CMF数据、色值与工艺参数仅供参考，实际量产请以认证供应商最新技术规格书与打样结果为准。*  
->  *本项目由开发者独立设计并持续迭代，感谢您的使用与支持。*
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`

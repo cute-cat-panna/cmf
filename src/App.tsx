@@ -45,7 +45,15 @@ export default function App() {
     pencilHardness: '耐刮擦铅笔硬度',
     glossRange: '量产可实现光泽度范围',
     colorDeltaE: '量产批次色差管控标准',
-    contactAngle: '抗指纹疏水接触角'
+    contactAngle: '抗指纹疏水接触角',
+    modulus300: '300%定伸应力',
+    operatingTemp: '工作温度范围',
+    elasticModulus: '弹性模量',
+    abrasionResistance: '耐磨性',
+    glassTransitionTemp: '玻璃化转变温度',
+    compressiveStrength: '抗压强度',
+    tensileModulus: '拉伸模量',
+    flexuralStrength: '弯曲强度'
   };
 
   const filteredData = useMemo(() => {
@@ -114,8 +122,17 @@ export default function App() {
 
       {/* Hero */}
       {activeCategory !== 'Glossary' && (
-        <header className="px-6 py-20 md:py-32 border-b border-line bg-white">
-          <div className="max-w-7xl mx-auto">
+        <header className="relative px-6 py-20 md:py-32 border-b border-line overflow-hidden bg-paper">
+          <div className="absolute inset-0 z-0">
+            <img 
+              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2070" 
+              className="w-full h-full object-cover opacity-15 grayscale" 
+              alt="Background"
+              referrerPolicy="no-referrer"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-paper via-paper/40 to-transparent"></div>
+          </div>
+          <div className="max-w-7xl mx-auto relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -321,6 +338,17 @@ export default function App() {
                           <p className="text-[10px] uppercase text-paper/40 mb-1">成本 (材料/模具)</p>
                           <p className="text-sm font-bold">{item.cost?.material} / {item.cost?.tooling}</p>
                         </div>
+                        {item.sustainability && (
+                          <div className="bg-white/5 p-4 rounded-xl">
+                            <p className="text-[10px] uppercase text-paper/40 mb-1">可持续性 (回收/认证)</p>
+                            <p className="text-sm mb-2">{item.sustainability.recycling}</p>
+                            <div className="flex flex-wrap gap-1">
+                              {item.sustainability.certification.map(cert => (
+                                <span key={cert} className="px-1.5 py-0.5 bg-white/10 rounded text-[9px]">{cert}</span>
+                              ))}
+                            </div>
+                          </div>
+                        )}
                         <div className="bg-white/5 p-4 rounded-xl">
                           <p className="text-[10px] uppercase text-paper/40 mb-1">替代方案</p>
                           <p className="text-sm italic">{item.alternatives?.join(', ') || '无'}</p>
@@ -470,6 +498,28 @@ export default function App() {
                         <p className="font-bold text-sm">{selectedItem.sustainability?.carbonFootprint || 'N/A'}</p>
                       </div>
                     </section>
+
+                    {selectedItem.sustainability && (
+                      <section className="bg-ink/5 p-6 rounded-3xl border border-line/20">
+                        <h4 className="flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-ink/30 mb-4">
+                          <Leaf className="w-4 h-4" /> 可持续性
+                        </h4>
+                        <div className="space-y-4">
+                          <div>
+                            <p className="text-[10px] uppercase text-ink/40 mb-1">回收说明</p>
+                            <p className="text-sm text-ink/70">{selectedItem.sustainability.recycling}</p>
+                          </div>
+                          <div>
+                            <p className="text-[10px] uppercase text-ink/40 mb-1">相关认证</p>
+                            <div className="flex flex-wrap gap-2 mt-1">
+                              {selectedItem.sustainability.certification.map(cert => (
+                                <span key={cert} className="px-2 py-1 bg-white border border-line rounded text-[10px] font-bold text-ink/60">{cert}</span>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                    )}
 
                     <section>
                       <h4 className="flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-ink/30 mb-4">

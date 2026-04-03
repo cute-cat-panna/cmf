@@ -73,8 +73,8 @@ export const materials: CMFItem[] = [
     category: '塑料',
     name: 'POM(聚甲醛)',
     nameEn: 'Polyoxymethylene',
-    description: '聚甲醛，俗称“赛钢”。具有极高的刚性和硬度，优异的自润滑性。',
-    image: 'https://s41.ax1x.com/2026/04/03/peYYCyF.jpg',
+    description: '聚甲醛，俗称“赛钢”，缩醛，醋酸塑料。具有极高的刚性和硬度，优异的自润滑性。',
+    image: 'https://sybridge.com/wp-content/uploads/2023/06/Delrin-Hero-1732x1152-1.jpg',
     tags: ['高刚性', '自润滑', '耐磨'],
     properties: {
       density: '1.41–1.42 g/cm³',
@@ -173,7 +173,7 @@ export const materials: CMFItem[] = [
     name: 'PE (聚乙烯)',
     nameEn: 'Polyethylene',
     description: '聚乙烯。耐腐蚀性优异，电绝缘性好，手感温润。',
-    image: 'https://picsum.photos/seed/hdpe-polyethylene/800/600',
+    image: 'https://sybridge.com/wp-content/uploads/2023/07/shutterstock_1690106935.jpg',
     tags: ['耐腐蚀', '食品级', '低成本'],
     properties: {
       density: '0.94–0.97 g/cm³',
@@ -206,7 +206,7 @@ export const materials: CMFItem[] = [
     name: 'PVC(聚氯乙烯)',
     nameEn: 'Polyvinyl Chloride',
     description: '聚氯乙烯。阻燃性好，化学稳定性高，应用极广。',
-    image: 'https://picsum.photos/seed/pvc-material-industrial/800/600',
+    image: 'https://sybridge.com/wp-content/uploads/2023/06/shutterstock_747016306-1-1728x1152-1-1024x683.jpg',
     tags: ['阻燃', '耐化学', '多功能'],
     properties: {
       density: '1.35–1.45 g/cm³',
@@ -218,7 +218,199 @@ export const materials: CMFItem[] = [
     },
     appearance: '微黄半透明，可制成硬质或软质，表面光洁，易于着色。',
     processability: ['挤出', '注塑', '压延', '吹塑', '焊接'],
-    cost: { material: '8–15 元/kg', tooling: '中等', unit: '低' }
+    cost: { material: '8–15 元/kg', tooling: '中等', unit: '低' },
+    sustainability: {
+      recycling: '回收率较低，需专业处理以防止氯化氢释放',
+      certification: ['RoHS', 'REACH'],
+      carbonFootprint: '约3.0 kg CO₂/kg'
+    }
+  },
+  {
+    id: 'mat-peek',
+    type: 'Material',
+    category: '塑料',
+    name: 'PEEK(聚醚醚酮)',
+    nameEn: 'Polyetheretherketone',
+    description: '聚醚醚酮。高性能半结晶工程塑料，具有极佳的机械强度、耐高温性（连续使用温度可达260°C）和优异的耐化学性。',
+    image: 'https://sybridge.com/wp-content/uploads/2023/06/shutterstock_1930041692.jpg',
+    tags: ['特种工程塑料', '耐高温', '耐化学', '高强度'],
+    properties: {
+      density: '1.30–1.32 g/cm³',
+      hardness: '洛氏R 126',
+      tensileStrength: '90–100 MPa',
+      flexuralModulus: '3700–4100 MPa',
+      impactStrength: '5–10 kJ/m²',
+      heatDistortionTemp: '150–160 °C (无添加), 315 °C (添加碳/玻璃)',
+      meltingPoint: '343 °C'
+    },
+    appearance: '天然色为浅褐色（米色），也可提供黑色。表面质感坚硬，具有金属感。',
+    processability: ['注塑', '挤出', 'CNC加工', '3D打印 (FDM/SLS)'],
+    cost: { material: '600–1200 元/kg', tooling: '极高 (需高温模具)', unit: '高' },
+    sustainability: {
+      recycling: '100%可回收，具有极长的使用寿命，减少更换频率',
+      certification: ['FDA', 'ISO 10993 (医疗级)', 'RoHS'],
+      carbonFootprint: '约12.0 kg CO₂/kg'
+    },
+    suppliers: [
+      { name: '威格斯 (Victrex)', grade: '450G', features: '通用级，高性能' },
+      { name: '索尔维 (Solvay)', grade: 'KetaSpire®', features: '高纯度，耐化学' },
+      { name: '赢创 (Evonik)', grade: 'VESTAKEEP®', features: '医疗级，易加工' }
+    ],
+    alternatives: ['PPS', 'PEI', 'PAI']
+  },
+  {
+    id: 'mat-tpe',
+    type: 'Material',
+    category: '塑料',
+    name: 'TPE (热塑性弹性体)',
+    nameEn: 'Thermoplastic Elastomer',
+    description: '热塑性弹性体，俗称热塑性橡胶。结合了橡胶的弹性和塑料的加工性，具有优异的触感和防滑性能。',
+    image: 'https://sybridge.com/wp-content/uploads/2023/06/Automotive-Plastics-Listing-1024x683-1.jpg',
+    tags: ['高弹性', '触感柔软', '防滑', '可回收'],
+    properties: {
+      density: '0.90–1.20 g/cm³',
+      hardness: 'Shore 29A–95A',
+      tensileStrength: '7.6 MPa (断裂)',
+      elongation: '950%',
+      modulus300: '1.2 MPa',
+      operatingTemp: '-40 至 91 °C'
+    },
+    appearance: '触感柔软，表面具有橡胶质感，防滑性好，易于着色。',
+    processability: ['注塑', '挤出', '吹塑', '二次注塑 (包胶)'],
+    cost: { material: '20–40 元/kg', tooling: '中等', unit: '低' },
+    sustainability: {
+      recycling: '100%可回收，边角料可重复利用',
+      certification: ['RoHS', 'REACH', 'FDA (医疗级)'],
+      carbonFootprint: '约2.8 kg CO₂/kg'
+    },
+    suppliers: [
+      { name: 'Kent Elastomer', grade: 'K2702', features: '高伸长率，医疗级' },
+      { name: 'KRAIBURG TPE', grade: 'THERMOLAST® K', features: '包胶性能优异' }
+    ],
+    alternatives: ['TPU', '硅胶', 'EPDM']
+  },
+  {
+    id: 'mat-tpu',
+    type: 'Material',
+    category: '塑料',
+    name: 'TPU (热塑性聚氨酯)',
+    nameEn: 'Thermoplastic Polyurethane',
+    description: '热塑性聚氨酯弹性体。具有极高的强度、耐磨性和耐油性，兼具塑料的硬度和橡胶的弹性。',
+    image: 'https://sybridge.com/wp-content/uploads/2023/06/carbon_adidas_basketball_court_product_off_model.jpg',
+    tags: ['高耐磨', '高强度', '耐油', '柔韧'],
+    properties: {
+      density: '1.08–1.25 g/cm³',
+      hardness: 'Shore 85A–95A',
+      tensileStrength: '34 MPa (断裂)',
+      elasticModulus: '20 MPa',
+      abrasionResistance: '82 mm³',
+      glassTransitionTemp: '-44 °C'
+    },
+    appearance: '透明或不透明，表面抗刮性好，质感可调。',
+    processability: ['注塑', '挤出', '3D打印 (FDM/SLS)'],
+    cost: { material: '30–60 元/kg', tooling: '中等', unit: '中等' },
+    sustainability: {
+      recycling: '可回收，比PVC更环保',
+      certification: ['RoHS', 'REACH', 'OEKO-TEX'],
+      carbonFootprint: '约3.5 kg CO₂/kg'
+    },
+    suppliers: [
+      { name: '巴斯夫', grade: 'Ultrafuse TPU 85A', features: '高性能打印级' },
+      { name: '万华化学', grade: 'Wanhua TPU', features: '国产龙头，规格齐全' }
+    ],
+    alternatives: ['TPE', 'PVC', '尼龙弹性体']
+  },
+  {
+    id: 'mat-ps',
+    type: 'Material',
+    category: '塑料',
+    name: 'PS (聚苯乙烯)',
+    nameEn: 'Polystyrene',
+    description: '聚苯乙烯。包括通用级(GPPS)和高抗冲级(HIPS)。GPPS透明脆硬，HIPS不透明且抗冲击。',
+    image: 'https://sybridge.com/wp-content/uploads/2023/06/shutterstock_595650-1740x1152-1-1024x678.jpeg',
+    tags: ['低成本', '尺寸稳定', '食品级', '易加工'],
+    properties: {
+      density: '1.04–1.06 g/cm³',
+      tensileStrength: '28 MPa (HIPS)',
+      elongation: '55% (HIPS)',
+      flexuralModulus: '1930 MPa',
+      impactStrength: '107 J/m (带缺口)',
+      heatDistortionTemp: '92 °C'
+    },
+    appearance: 'GPPS为高透明，HIPS为不透明乳白色，表面光泽度好。',
+    processability: ['注塑', '热成型', '挤出'],
+    cost: { material: '9–14 元/kg', tooling: '低', unit: '极低' },
+    sustainability: {
+      recycling: '可回收，但不可生物降解',
+      certification: ['FDA', 'RoHS'],
+      carbonFootprint: '约3.4 kg CO₂/kg'
+    },
+    suppliers: [
+      { name: '奇美', grade: 'PG-33', features: 'GPPS通用级' },
+      { name: 'PS嘉兴', grade: 'HIPS-622', features: '高抗冲级' }
+    ],
+    alternatives: ['ABS', 'PP', 'AS']
+  },
+  {
+    id: 'mat-asa',
+    type: 'Material',
+    category: '塑料',
+    name: 'ASA (丙烯腈-苯乙烯-丙烯酸酯)',
+    nameEn: 'Acrylonitrile Styrene Acrylate',
+    description: '具有极佳的耐候性和抗紫外线性能，是ABS的耐候替代品。在户外环境下能长期保持颜色和机械性能。',
+    image: 'https://sybridge.com/wp-content/uploads/2023/05/Blue-plastic-parts.jpg',
+    tags: ['耐候', '抗UV', '高冲击', '户外应用'],
+    properties: {
+      density: '1.06–1.08 g/cm³',
+      tensileStrength: '33 MPa (屈服)',
+      flexuralModulus: '1980 MPa',
+      compressiveStrength: '75 MPa',
+      impactStrength: '15–25 kJ/m²'
+    },
+    appearance: '表面光滑，光泽度高，颜色稳定性极佳。',
+    processability: ['注塑', '挤出', '3D打印', '机械加工'],
+    cost: { material: '25–40 元/kg', tooling: '中等', unit: '中等' },
+    sustainability: {
+      recycling: '可回收',
+      certification: ['RoHS', 'REACH'],
+      carbonFootprint: '约4.0 kg CO₂/kg'
+    },
+    suppliers: [
+      { name: 'SABIC', grade: 'GELOY™', features: '极佳的耐候性' },
+      { name: 'LG化学', grade: 'ASA LI912', features: '高流动性' }
+    ],
+    alternatives: ['ABS', 'PC/ASA', 'PVC']
+  },
+  {
+    id: 'mat-pcabs',
+    type: 'Material',
+    category: '塑料',
+    name: 'PC-ABS (聚碳酸酯/ABS合金)',
+    nameEn: 'Polycarbonate/Acrylonitrile Butadiene Styrene',
+    description: 'PC与ABS的共混物。结合了PC的高耐热、高强度和ABS的加工性、延展性，是应用最广的工程塑料合金之一。',
+    image: 'https://sybridge.com/wp-content/uploads/2023/06/shutterstock_708173818.jpg',
+    tags: ['高强度', '高耐热', '尺寸稳定', '合金材料'],
+    properties: {
+      density: '1.12–1.15 g/cm³',
+      tensileStrength: '41 MPa',
+      tensileModulus: '1916 MPa',
+      flexuralStrength: '67 MPa',
+      flexuralModulus: '1930 MPa',
+      heatDistortionTemp: '110 °C (@66psi)'
+    },
+    appearance: '表面质量优异，易于喷涂和电镀，通常为不透明。',
+    processability: ['注塑', '挤出', '喷涂', '电镀'],
+    cost: { material: '22–35 元/kg', tooling: '中等', unit: '中等' },
+    sustainability: {
+      recycling: '可回收',
+      certification: ['RoHS', 'REACH', 'UL94'],
+      carbonFootprint: '约4.5 kg CO₂/kg'
+    },
+    suppliers: [
+      { name: 'SABIC', grade: 'CYCOLOY™', features: '行业标准级' },
+      { name: '科思创', grade: 'Bayblend®', features: '高耐热系列' }
+    ],
+    alternatives: ['PC', 'ABS', 'PC/PBT']
   },
   {
     id: 'mat-az91d',

@@ -29,6 +29,14 @@ export interface CMFItem {
     glossRange?: string;
     colorDeltaE?: string;
     contactAngle?: string;
+    modulus300?: string;
+    operatingTemp?: string;
+    elasticModulus?: string;
+    abrasionResistance?: string;
+    glassTransitionTemp?: string;
+    compressiveStrength?: string;
+    tensileModulus?: string;
+    flexuralStrength?: string;
   };
   appearance?: string;
   processability?: string[];
