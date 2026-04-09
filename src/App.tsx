@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
   Search, 
@@ -13,10 +13,17 @@ import {
   Leaf,
   DollarSign,
   Activity,
-  Github
+  Github,
+  MessageSquare,
+  Send,
+  Bot,
+  User as UserIcon
 } from 'lucide-react';
+import { GoogleGenAI, Chat } from "@google/genai";
 import { cmfData, glossary } from './data';
 import { CMFItem, CMFType } from './types';
+
+const SYSTEM_INSTRUCTION = `你是一位专业CMF设计专家助理，专注于色彩、材料和表面处理领域。作为CMF设计师的AI助手，你具备深厚的色彩理论、材料科学和工业设计知识，能够理解CMF设计在用户体验、品牌表达和产品创新中的重要作用。你的任务是帮助设计师探索色彩趋势、材料特性和表面处理工艺，提供符合项目需求、生产工艺和成本预算的解决方案。你的回答应该专业、细致且实用，能够结合具体的设计场景、目标用户群体和市场定位，给出有针对性的建议。你需要善于分析色彩心理、材质触感和视觉美感之间的平衡，并能将抽象的设计理念转化为可实现的技术方案。在提供建议时，请考虑环保材料趋势、生产工艺可行性、成本效益分析以及是否符合品牌调性等因素。你可以帮助设计师创建色彩搭配方案、推荐合适的材料和表面处理技术，并提供实际应用案例作为参考。你的沟通风格应该清晰、专业且具有启发性，能够激发设计师的创作灵感，同时确保技术建议的准确性。当遇到不确定的信息时，你应当保持诚实并建议进一步查询。你的目标是成为CMF设计师工作中的得力助手，帮助他们高效完成设计任务，提升产品的美学价值和市场竞争力。​`;
 
 export default function App() {
   const [activeCategory, setActiveCategory] = useState<CMFType | 'All' | 'Glossary'>('All');
@@ -26,6 +33,22 @@ export default function App() {
   const [isCompareModalOpen, setIsCompareModalOpen] = useState(false);
   const [compareList, setCompareList] = useState<CMFItem[]>([]);
   const [isCompareMode, setIsCompareMode] = useState(false);
+  const [isChatOpen, setIsChatOpen] = useState(false);
+  const [chatMessages, setChatMessages] = useState<{ role: 'user' | 'assistant', content: string }[]>([]);
+  const [chatInput, setChatInput] = useState('');
+  const [isAiTyping, setIsAiTyping] = useState(false);
+  
+  const chatRef = useRef<Chat | null>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  // Initialize Gemini AI
+  const ai = useMemo(() => new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY! }), []);
+
+  useEffect(() => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+    }
+  }, [chatMessages, isAiTyping]);
 
   const materialCategories = ['全部', '塑料', '金属', '橡胶', '木材和纸', '玻璃陶瓷', '纺织面料'];
 
@@ -77,6 +100,50 @@ export default function App() {
       setCompareList(compareList.filter(i => i.id !== item.id));
     } else if (compareList.length < 3) {
       setCompareList([...compareList, item]);
+    }
+  };
+
+  const handleSendChatMessage = async () => {
+    if (!chatInput.trim() || isAiTyping) return;
+
+    const userMessage = chatInput.trim();
+    setChatInput('');
+    setChatMessages(prev => [...prev, { role: 'user', content: userMessage }]);
+    setIsAiTyping(true);
+
+    try {
+      if (!chatRef.current) {
+        chatRef.current = ai.chats.create({
+          model: "gemini-3-flash-preview",
+          config: {
+            systemInstruction: SYSTEM_INSTRUCTION,
+          }
+        });
+      }
+
+      const streamResponse = await chatRef.current.sendMessageStream({
+        message: userMessage,
+      });
+
+      let assistantMessage = '';
+      setChatMessages(prev => [...prev, { role: 'assistant', content: '' }]);
+
+      for await (const chunk of streamResponse) {
+        const text = chunk.text;
+        if (text) {
+          assistantMessage += text;
+          setChatMessages(prev => {
+            const newMessages = [...prev];
+            newMessages[newMessages.length - 1].content = assistantMessage;
+            return newMessages;
+          });
+        }
+      }
+    } catch (error) {
+      console.error('Chat Error:', error);
+      setChatMessages(prev => [...prev, { role: 'assistant', content: '抱歉，我遇到了一些问题，请稍后再试。' }]);
+    } finally {
+      setIsAiTyping(false);
     }
   };
 
@@ -542,7 +609,7 @@ export default function App() {
                       </h4>
                       <div className="space-y-3">
                         {selectedItem.suppliers?.map(sup => (
-                          <div key={sup.grade} className="bg-white p-4 rounded-2xl border border-line flex justify-between items-center">
+                          <div key={`${sup.name}-${sup.grade}`} className="bg-white p-4 rounded-2xl border border-line flex justify-between items-center">
                             <div>
                               <p className="font-bold">{sup.name}</p>
                               <p className="text-xs text-ink/40">{sup.grade}</p>
@@ -637,6 +704,86 @@ export default function App() {
                 )}
               </div>
             </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+      {/* AI Chat Button */}
+      <button 
+        onClick={() => setIsChatOpen(true)}
+        className="fixed bottom-8 right-8 w-14 h-14 bg-ink text-paper rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform z-40"
+      >
+        <MessageSquare className="w-6 h-6" />
+      </button>
+
+      {/* AI Chat Window */}
+      <AnimatePresence>
+        {isChatOpen && (
+          <motion.div 
+            initial={{ opacity: 0, y: 20, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 20, scale: 0.95 }}
+            className="fixed bottom-24 right-8 w-96 h-[500px] bg-paper rounded-3xl shadow-2xl border border-line flex flex-col z-50 overflow-hidden"
+          >
+            <div className="p-4 bg-ink text-paper flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Bot className="w-5 h-5" />
+                <span className="font-display font-bold">CMF AI 助手</span>
+              </div>
+              <button onClick={() => setIsChatOpen(false)} className="hover:opacity-60">
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="flex-1 overflow-y-auto p-4 space-y-4" ref={scrollRef}>
+              {chatMessages.length === 0 && (
+                <div className="text-center py-10 text-ink/40">
+                  <Bot className="w-10 h-10 mx-auto mb-2 opacity-20" />
+                  <p className="text-sm">你好！我是 CMF AI 助手。<br />有什么我可以帮你的吗？</p>
+                </div>
+              )}
+              {chatMessages.map((msg, idx) => (
+                <div key={idx} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+                  <div className={`max-w-[80%] p-3 rounded-2xl text-sm ${msg.role === 'user' ? 'bg-ink text-paper rounded-tr-none' : 'bg-ink/5 text-ink rounded-tl-none'}`}>
+                    <div className="flex items-center gap-2 mb-1 opacity-40 text-[10px] uppercase font-bold">
+                      {msg.role === 'user' ? <UserIcon className="w-3 h-3" /> : <Bot className="w-3 h-3" />}
+                      {msg.role === 'user' ? 'You' : 'AI'}
+                    </div>
+                    <p className="leading-relaxed whitespace-pre-wrap">{msg.content}</p>
+                  </div>
+                </div>
+              ))}
+              {isAiTyping && (
+                <div className="flex justify-start">
+                  <div className="bg-ink/5 text-ink p-3 rounded-2xl rounded-tl-none">
+                    <div className="flex gap-1">
+                      <span className="w-1.5 h-1.5 bg-ink/20 rounded-full animate-bounce"></span>
+                      <span className="w-1.5 h-1.5 bg-ink/20 rounded-full animate-bounce [animation-delay:0.2s]"></span>
+                      <span className="w-1.5 h-1.5 bg-ink/20 rounded-full animate-bounce [animation-delay:0.4s]"></span>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <div className="p-4 border-t border-line bg-paper">
+              <div className="relative">
+                <input 
+                  type="text" 
+                  placeholder="输入消息..."
+                  value={chatInput}
+                  onChange={(e) => setChatInput(e.target.value)}
+                  onKeyDown={(e) => e.key === 'Enter' && handleSendChatMessage()}
+                  className="w-full bg-ink/5 border-none rounded-2xl py-3 pl-4 pr-12 text-sm focus:ring-1 focus:ring-ink/20 transition-all"
+                />
+                <button 
+                  onClick={handleSendChatMessage}
+                  disabled={!chatInput.trim() || isAiTyping}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-ink text-paper rounded-xl flex items-center justify-center disabled:opacity-20 transition-all"
+                >
+                  <Send className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
