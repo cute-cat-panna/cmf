@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import { cmfData, glossary } from './data';
 import { CMFItem, CMFType } from './types';
+import { AIChat } from './components/AIChat';
 
 export default function App() {
   const [activeCategory, setActiveCategory] = useState<CMFType | 'All' | 'Glossary'>('All');
@@ -653,6 +654,7 @@ export default function App() {
           </motion.div>
         )}
       </AnimatePresence>
+      <AIChat />
     </div>
   );
 }
