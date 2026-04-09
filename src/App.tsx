@@ -57,14 +57,27 @@ export default function App() {
     flexuralStrength: '弯曲强度',
     tearStrength: '撕裂强度',
     stress50: '50%定伸应力',
-    stress100: '100%定伸应力'
+    stress100: '100%定伸应力',
+    grammage: '克重',
+    whiteness: '白度',
+    burstStrength: '耐破度',
+    foldingResistance: '耐折度',
+    waterAbsorption: '吸水性',
+    glossiness: '光泽度',
+    opacity: '不透明度',
+    coatingAdhesion: '涂层附着力',
+    stiffness: '挺度',
+    tearingResistance: '撕裂度'
   };
 
   const filteredData = useMemo(() => {
     if (activeCategory === 'Glossary') return [];
     return cmfData.filter(item => {
       const matchesCategory = activeCategory === 'All' || item.type === activeCategory;
-      const matchesSubCategory = activeCategory !== 'Material' || activeSubCategory === '全部' || item.category === activeSubCategory;
+      let matchesSubCategory = activeCategory !== 'Material' || activeSubCategory === '全部' || item.category === activeSubCategory;
+      if (activeCategory === 'Material' && activeSubCategory === '木材和纸') {
+        matchesSubCategory = item.category === '木材' || item.category === '纸' || item.category === '木材和纸';
+      }
       const matchesSearch = item.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
                            item.nameEn?.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));

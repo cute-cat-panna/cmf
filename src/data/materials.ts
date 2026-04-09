@@ -1499,4 +1499,1169 @@ export const materials: CMFItem[] = [
     processability: ['编织', '裁剪', '缝制', '热压'],
     cost: { material: '低', tooling: '低', unit: '低' }
   }
+,
+  {
+    "id": "mat-white-oak",
+    "type": "Material",
+    "category": "木材",
+    "name": "白橡木",
+    "nameEn": "White Oak (Quercus alba)",
+    "description": "CMF设计高端实木首选，北美经典硬木，纹理粗犷大气呈山形纹/直纹，心材浅棕色至深褐色，边材奶白色，密度高、耐腐性强（天然耐腐等级Ⅰ级），质感温润有质感，是高端家具、地板、装饰面板、酒桶的核心用材。",
+    "image": "https://picsum.photos/seed/800/600",
+    "tags": [
+      "高端硬木",
+      "山形纹",
+      "耐腐",
+      "温润质感",
+      "高端家具",
+      "地板",
+      "装饰面板"
+    ],
+    "properties": {
+      "density": "0.72–0.78 g/cm³（气干密度，ASTM D2395）",
+      "hardness": "詹卡硬度 1360 lbf（6050 N，ASTM D143）",
+      "tensileStrength": "顺纹抗拉 103 MPa（ASTM D143）",
+      "yieldStrength": "顺纹抗压 51 MPa（ASTM D143）",
+      "elongation": "1-2%（顺纹）",
+      "flexuralModulus": "抗弯弹性模量 12200 MPa（ASTM D143）",
+      "impactStrength": "冲击韧性 12.5 kJ/m²（ASTM D256）",
+      "heatDistortionTemp": "N/A（木材无热变形温度，150°C开始热降解）",
+      "thermalExpansion": "5.0–7.0 x 10⁻⁶ /°C（顺纹，ASTM D696）",
+      "thermalConductivity": "0.17–0.19 W/m·K（ASTM C177）",
+      "meltingPoint": "N/A（不熔化，约250–300°C分解）",
+      "corrosionResistance": "天然耐腐等级Ⅰ级（极强，GB/T 13942.1-2009），心材耐腐耐白蚁，边材易受虫蛀，适合户外/潮湿环境",
+      "adhesion": "0级 (ISO 2409 / ASTM D3359，表面打磨后)",
+      "pencilHardness": "取决于表面涂层 (清漆通常为 1H-2H)",
+      "glossRange": "10–70 GU (取决于表面涂装工艺，ASTM D523)",
+      "colorDeltaE": "ΔE*ab ≤ 2.5 (同批次精选材，ASTM D2244)",
+      "contactAngle": "80°–95° (表面涂饰后，ASTM D7334)"
+    },
+    "appearance": "心材浅棕色至深褐色，边材奶白色至浅黄白色，纹理粗犷大气，以山形纹为主，偶见直纹，切面光滑有光泽，质感温润细腻，随使用时间会逐渐氧化加深，呈现自然包浆效果。",
+    "processability": [
+      "锯切",
+      "刨削",
+      "砂光",
+      "雕刻",
+      "榫卯",
+      "胶合",
+      "涂装（清漆/木蜡油/硝基漆）",
+      "激光雕刻",
+      "热压弯曲"
+    ],
+    "cost": {
+      "material": "8000–15000 元/m³（2026年国内市场均价，FSC认证普通级）；18000–30000 元/m³（精选级/无节材）",
+      "tooling": "中等",
+      "unit": "高"
+    },
+    "sustainability": {
+      "recycling": "100%可回收再利用，可翻新、可降解，是碳汇材料（固碳能力约1.8 kg CO₂/kg木材）",
+      "certification": [
+        "FSC",
+        "PEFC",
+        "CARB Phase 2"
+      ],
+      "carbonFootprint": "约0.5–1.0 kg CO₂/kg（含种植、采伐、加工，不含运输）"
+    },
+    "suppliers": [
+      {
+        "name": "美国硬木协会 (AHEC)",
+        "grade": "FAS White Oak",
+        "features": "北美进口，FAS顶级材，纹理均匀，无节或少节"
+      },
+      {
+        "name": "大自然家居",
+        "grade": "FSC白橡",
+        "features": "国内地板/家具龙头，供应链稳定，精选级材"
+      },
+      {
+        "name": "圣象集团",
+        "grade": "FAS白橡",
+        "features": "地板专用材，尺寸稳定性高"
+      },
+      {
+        "name": "加拿大硬木公司",
+        "grade": "Canadian White Oak",
+        "features": "加拿大进口，颜色偏浅，直纹比例高"
+      }
+    ],
+    "alternatives": [
+      "红橡木",
+      "欧洲白蜡木",
+      "水曲柳",
+      "樱桃木",
+      "MDF贴白橡木皮"
+    ]
+  },
+  {
+    "id": "mat-black-walnut",
+    "type": "Material",
+    "category": "木材",
+    "name": "黑胡桃木",
+    "nameEn": "Black Walnut (Juglans nigra)",
+    "description": "CMF设计“奢侈品级”木材，北美硬木天花板，心材呈独特的巧克力色至深紫褐色，边材奶白色，纹理细腻流畅呈直纹/波浪纹/鸟眼纹，密度适中、稳定性极佳，质感奢华温润，是高端家具、装饰面板、乐器、工艺品的首选。",
+    "image": "https://picsum.photos/seed/800/600",
+    "tags": [
+      "奢侈品级木材",
+      "巧克力色",
+      "细腻纹理",
+      "奢华质感",
+      "高端家具",
+      "装饰面板",
+      "乐器"
+    ],
+    "properties": {
+      "density": "0.63–0.69 g/cm³（气干密度，ASTM D2395）",
+      "hardness": "詹卡硬度 1010 lbf（4490 N，ASTM D143）",
+      "tensileStrength": "顺纹抗拉 98 MPa（ASTM D143）",
+      "yieldStrength": "顺纹抗压 52 MPa（ASTM D143）",
+      "elongation": "1-2%（顺纹）",
+      "flexuralModulus": "抗弯弹性模量 11600 MPa（ASTM D143）",
+      "impactStrength": "冲击韧性 11.0 kJ/m²（ASTM D256）",
+      "heatDistortionTemp": "N/A（木材无热变形温度，150°C开始热降解）",
+      "thermalExpansion": "4.5–6.5 x 10⁻⁶ /°C（顺纹，ASTM D696）",
+      "thermalConductivity": "0.15–0.17 W/m·K（ASTM C177）",
+      "meltingPoint": "N/A（不熔化，约250–300°C分解）",
+      "corrosionResistance": "天然耐腐等级Ⅱ级（强，GB/T 13942.1-2009），心材耐腐性优异，边材易受虫蛀，适合室内环境",
+      "adhesion": "0级 (ISO 2409 / ASTM D3359，表面打磨后)",
+      "pencilHardness": "取决于表面涂层 (清漆通常为 1H-2H)",
+      "glossRange": "20–80 GU (取决于表面涂装工艺，ASTM D523)",
+      "colorDeltaE": "ΔE*ab ≤ 2.0 (同批次精选材，ASTM D2244)",
+      "contactAngle": "85°–100° (表面涂饰后，ASTM D7334)"
+    },
+    "appearance": "心材呈独特的巧克力色至深紫褐色，偶带深色条纹，边材奶白色至浅黄白色，纹理细腻流畅，以直纹为主，偶见波浪纹、鸟眼纹等稀有纹理，切面光滑有丝绸般光泽，质感奢华温润，随使用时间会逐渐氧化呈现更浓郁的包浆效果。",
+    "processability": [
+      "锯切",
+      "刨削",
+      "砂光",
+      "雕刻",
+      "榫卯",
+      "胶合",
+      "涂装（清漆/木蜡油/硝基漆，建议清涂以展示纹理）",
+      "激光雕刻",
+      "热压弯曲"
+    ],
+    "cost": {
+      "material": "15000–25000 元/m³（2026年国内市场均价，FSC认证普通级）；30000–60000 元/m³（精选级/无节材/稀有纹理材）",
+      "tooling": "中等偏高",
+      "unit": "极高"
+    },
+    "sustainability": {
+      "recycling": "100%可回收再利用，可翻新、可降解，是碳汇材料（固碳能力约1.7 kg CO₂/kg木材）",
+      "certification": [
+        "FSC",
+        "PEFC",
+        "CARB Phase 2"
+      ],
+      "carbonFootprint": "约0.6–1.2 kg CO₂/kg（含种植、采伐、加工，不含运输）"
+    },
+    "suppliers": [
+      {
+        "name": "美国硬木协会 (AHEC)",
+        "grade": "FAS Black Walnut",
+        "features": "北美进口，FAS顶级材，颜色均匀，稀有纹理可选"
+      },
+      {
+        "name": "美克家居",
+        "grade": "FSC黑胡桃",
+        "features": "国内高端家具龙头，精选级材，供应链稳定"
+      },
+      {
+        "name": "曲美家居",
+        "grade": "FAS黑胡桃",
+        "features": "家具专用材，尺寸稳定性高"
+      },
+      {
+        "name": "加拿大硬木公司",
+        "grade": "Canadian Black Walnut",
+        "features": "加拿大进口，颜色偏深，纹理细腻"
+      }
+    ],
+    "alternatives": [
+      "樱桃木",
+      "柚木",
+      "红橡木",
+      "黑檀木（仿）",
+      "MDF贴黑胡桃木皮"
+    ]
+  },
+  {
+    "id": "mat-cherry",
+    "type": "Material",
+    "category": "木材",
+    "name": "樱桃木",
+    "nameEn": "Cherry (Prunus serotina)",
+    "description": "CMF设计“优雅派”木材，北美经典硬木，心材初呈浅红色至粉红色，随使用时间逐渐氧化为浓郁的红棕色至酒红色，边材奶白色，纹理细腻柔和呈直纹/波浪纹，密度适中、稳定性好，质感温润优雅，是高端家具、装饰面板、乐器的常用材。",
+    "image": "https://picsum.photos/seed/800/600",
+    "tags": [
+      "优雅硬木",
+      "氧化变色",
+      "红棕色",
+      "细腻纹理",
+      "高端家具",
+      "装饰面板",
+      "乐器"
+    ],
+    "properties": {
+      "density": "0.60–0.66 g/cm³（气干密度，ASTM D2395）",
+      "hardness": "詹卡硬度 950 lbf（4220 N，ASTM D143）",
+      "tensileStrength": "顺纹抗拉 92 MPa（ASTM D143）",
+      "yieldStrength": "顺纹抗压 49 MPa（ASTM D143）",
+      "elongation": "1-2%（顺纹）",
+      "flexuralModulus": "抗弯弹性模量 10900 MPa（ASTM D143）",
+      "impactStrength": "冲击韧性 10.5 kJ/m²（ASTM D256）",
+      "heatDistortionTemp": "N/A（木材无热变形温度，150°C开始热降解）",
+      "thermalExpansion": "4.8–6.8 x 10⁻⁶ /°C（顺纹，ASTM D696）",
+      "thermalConductivity": "0.14–0.16 W/m·K（ASTM C177）",
+      "meltingPoint": "N/A（不熔化，约250–300°C分解）",
+      "corrosionResistance": "天然耐腐等级Ⅱ级（强，GB/T 13942.1-2009），心材耐腐性优异，边材易受虫蛀，适合室内环境",
+      "adhesion": "0级 (ISO 2409 / ASTM D3359，表面打磨后)",
+      "pencilHardness": "取决于表面涂层 (清漆通常为 1H-2H)",
+      "glossRange": "15–75 GU (取决于表面涂装工艺，ASTM D523)",
+      "colorDeltaE": "ΔE*ab ≤ 2.0 (同批次精选材，氧化前，ASTM D2244)",
+      "contactAngle": "80°–95° (表面涂饰后，ASTM D7334)"
+    },
+    "appearance": "心材初呈浅红色至粉红色，随使用时间逐渐氧化为浓郁的红棕色至酒红色，边材奶白色至浅黄白色，纹理细腻柔和，以直纹为主，偶见波浪纹，切面光滑有柔和光泽，质感温润优雅，氧化变色特性是其核心魅力。",
+    "processability": [
+      "锯切",
+      "刨削",
+      "砂光",
+      "雕刻",
+      "榫卯",
+      "胶合",
+      "涂装（清漆/木蜡油/硝基漆，建议清涂以展示氧化效果）",
+      "激光雕刻",
+      "热压弯曲"
+    ],
+    "cost": {
+      "material": "10000–18000 元/m³（2026年国内市场均价，FSC认证普通级）；22000–35000 元/m³（精选级/无节材）",
+      "tooling": "中等",
+      "unit": "高"
+    },
+    "sustainability": {
+      "recycling": "100%可回收再利用，可翻新、可降解，是碳汇材料（固碳能力约1.6 kg CO₂/kg木材）",
+      "certification": [
+        "FSC",
+        "PEFC",
+        "CARB Phase 2"
+      ],
+      "carbonFootprint": "约0.5–1.1 kg CO₂/kg（含种植、采伐、加工，不含运输）"
+    },
+    "suppliers": [
+      {
+        "name": "美国硬木协会 (AHEC)",
+        "grade": "FAS Cherry",
+        "features": "北美进口，FAS顶级材，颜色均匀，氧化效果好"
+      },
+      {
+        "name": "宜家家居（高端线）",
+        "grade": "FSC樱桃木",
+        "features": "国际品牌，供应链稳定，精选级材"
+      },
+      {
+        "name": "红苹果家具",
+        "grade": "FAS樱桃木",
+        "features": "家具专用材，尺寸稳定性高"
+      },
+      {
+        "name": "加拿大硬木公司",
+        "grade": "Canadian Cherry",
+        "features": "加拿大进口，颜色偏浅，纹理细腻"
+      }
+    ],
+    "alternatives": [
+      "黑胡桃木",
+      "柚木",
+      "红橡木",
+      "榉木",
+      "MDF贴樱桃木皮"
+    ]
+  },
+  {
+    "id": "mat-hard-maple",
+    "type": "Material",
+    "category": "木材",
+    "name": "硬枫木",
+    "nameEn": "Hard Maple (Acer saccharum)",
+    "description": "CMF设计“清新派”木材，北美经典硬木，心材奶白色至浅黄白色，边材与心材颜色接近，纹理细腻均匀呈直纹/鸟眼纹/虎斑纹，密度高、硬度高、耐磨性极佳，质感清新干净，是地板、家具、乐器（钢琴/小提琴）、运动器材的核心用材。",
+    "image": "https://picsum.photos/seed/800/600",
+    "tags": [
+      "清新硬木",
+      "奶白色",
+      "细腻均匀",
+      "耐磨",
+      "地板",
+      "乐器",
+      "运动器材"
+    ],
+    "properties": {
+      "density": "0.68–0.74 g/cm³（气干密度，ASTM D2395）",
+      "hardness": "詹卡硬度 1450 lbf（6450 N，ASTM D143）",
+      "tensileStrength": "顺纹抗拉 109 MPa（ASTM D143）",
+      "yieldStrength": "顺纹抗压 54 MPa（ASTM D143）",
+      "elongation": "1-2%（顺纹）",
+      "flexuralModulus": "抗弯弹性模量 12600 MPa（ASTM D143）",
+      "impactStrength": "冲击韧性 13.0 kJ/m²（ASTM D256）",
+      "heatDistortionTemp": "N/A（木材无热变形温度，150°C开始热降解）",
+      "thermalExpansion": "4.2–6.2 x 10⁻⁶ /°C（顺纹，ASTM D696）",
+      "thermalConductivity": "0.16–0.18 W/m·K（ASTM C177）",
+      "meltingPoint": "N/A（不熔化，约250–300°C分解）",
+      "corrosionResistance": "天然耐腐等级Ⅲ级（中等，GB/T 13942.1-2009），心材耐腐性一般，边材易受虫蛀，适合室内干燥环境",
+      "adhesion": "0级 (ISO 2409 / ASTM D3359，表面打磨后)",
+      "pencilHardness": "取决于表面涂层 (清漆通常为 1H-2H)",
+      "glossRange": "10–80 GU (取决于表面涂装工艺，ASTM D523)",
+      "colorDeltaE": "ΔE*ab ≤ 1.5 (同批次精选材，ASTM D2244)",
+      "contactAngle": "80°–95° (表面涂饰后，ASTM D7334)"
+    },
+    "appearance": "心材与边材颜色接近，呈奶白色至浅黄白色，纹理细腻均匀，以直纹为主，偶见鸟眼纹、虎斑纹等稀有纹理，切面光滑有柔和光泽，质感清新干净，不易变色，适合打造简约现代风格。",
+    "processability": [
+      "锯切",
+      "刨削",
+      "砂光",
+      "雕刻",
+      "榫卯",
+      "胶合",
+      "涂装（清漆/木蜡油/白色漆，清涂可展示清新质感）",
+      "激光雕刻",
+      "热压弯曲"
+    ],
+    "cost": {
+      "material": "9000–16000 元/m³（2026年国内市场均价，FSC认证普通级）；20000–32000 元/m³（精选级/无节材/稀有纹理材）",
+      "tooling": "中等",
+      "unit": "高"
+    },
+    "sustainability": {
+      "recycling": "100%可回收再利用，可翻新、可降解，是碳汇材料（固碳能力约1.7 kg CO₂/kg木材）",
+      "certification": [
+        "FSC",
+        "PEFC",
+        "CARB Phase 2"
+      ],
+      "carbonFootprint": "约0.5–1.0 kg CO₂/kg（含种植、采伐、加工，不含运输）"
+    },
+    "suppliers": [
+      {
+        "name": "美国硬木协会 (AHEC)",
+        "grade": "FAS Hard Maple",
+        "features": "北美进口，FAS顶级材，颜色均匀，稀有纹理可选"
+      },
+      {
+        "name": "圣象集团",
+        "grade": "FSC硬枫木",
+        "features": "国内地板龙头，地板专用材，耐磨性高"
+      },
+      {
+        "name": "雅马哈乐器",
+        "grade": "FAS硬枫木",
+        "features": "乐器专用材，声学性能优异"
+      },
+      {
+        "name": "加拿大硬木公司",
+        "grade": "Canadian Hard Maple",
+        "features": "加拿大进口，颜色偏白，纹理细腻"
+      }
+    ],
+    "alternatives": [
+      "榉木",
+      "白橡木",
+      "水曲柳",
+      "桦木",
+      "MDF贴硬枫木皮"
+    ]
+  },
+  {
+    "id": "mat-european-beech",
+    "type": "Material",
+    "category": "木材",
+    "name": "欧洲榉木",
+    "nameEn": "European Beech (Fagus sylvatica)",
+    "description": "CMF设计“实用派”木材，欧洲经典硬木，心材与边材颜色接近，呈浅黄白色至浅红褐色，纹理细腻均匀呈直纹/波浪纹，密度适中、稳定性好、易加工，质感温润朴实，性价比高，是家具、地板、装饰面板、工艺品的常用材。",
+    "image": "https://picsum.photos/seed/800/600",
+    "tags": [
+      "实用硬木",
+      "浅黄白色",
+      "细腻均匀",
+      "性价比高",
+      "家具",
+      "地板",
+      "装饰面板"
+    ],
+    "properties": {
+      "density": "0.69–0.75 g/cm³（气干密度，ASTM D2395）",
+      "hardness": "詹卡硬度 1220 lbf（5420 N，ASTM D143）",
+      "tensileStrength": "顺纹抗拉 105 MPa（ASTM D143）",
+      "yieldStrength": "顺纹抗压 50 MPa（ASTM D143）",
+      "elongation": "1-2%（顺纹）",
+      "flexuralModulus": "抗弯弹性模量 11900 MPa（ASTM D143）",
+      "impactStrength": "冲击韧性 12.0 kJ/m²（ASTM D256）",
+      "heatDistortionTemp": "N/A（木材无热变形温度，150°C开始热降解）",
+      "thermalExpansion": "5.2–7.2 x 10⁻⁶ /°C（顺纹，ASTM D696）",
+      "thermalConductivity": "0.16–0.18 W/m·K（ASTM C177）",
+      "meltingPoint": "N/A（不熔化，约250–300°C分解）",
+      "corrosionResistance": "天然耐腐等级Ⅲ级（中等，GB/T 13942.1-2009），心材耐腐性一般，边材易受虫蛀，适合室内干燥环境",
+      "adhesion": "0级 (ISO 2409 / ASTM D3359，表面打磨后)",
+      "pencilHardness": "取决于表面涂层 (清漆通常为 1H-2H)",
+      "glossRange": "10–70 GU (取决于表面涂装工艺，ASTM D523)",
+      "colorDeltaE": "ΔE*ab ≤ 2.0 (同批次精选材，ASTM D2244)",
+      "contactAngle": "80°–95° (表面涂饰后，ASTM D7334)"
+    },
+    "appearance": "心材与边材颜色接近，呈浅黄白色至浅红褐色，纹理细腻均匀，以直纹为主，偶见波浪纹，切面光滑有柔和光泽，质感温润朴实，性价比高，适合打造简约、北欧、日式风格。",
+    "processability": [
+      "锯切",
+      "刨削",
+      "砂光",
+      "雕刻",
+      "榫卯",
+      "胶合",
+      "涂装（清漆/木蜡油/色漆）",
+      "激光雕刻",
+      "热压弯曲",
+      "蒸汽弯曲"
+    ],
+    "cost": {
+      "material": "6000–12000 元/m³（2026年国内市场均价，FSC认证普通级）；15000–22000 元/m³（精选级/无节材）",
+      "tooling": "中等",
+      "unit": "中等"
+    },
+    "sustainability": {
+      "recycling": "100%可回收再利用，可翻新、可降解，是碳汇材料（固碳能力约1.7 kg CO₂/kg木材）",
+      "certification": [
+        "FSC",
+        "PEFC",
+        "CE"
+      ],
+      "carbonFootprint": "约0.4–0.9 kg CO₂/kg（含种植、采伐、加工，不含运输）"
+    },
+    "suppliers": [
+      {
+        "name": "欧洲硬木协会 (FEBO)",
+        "grade": "FAS European Beech",
+        "features": "欧洲进口，FAS顶级材，颜色均匀，稳定性高"
+      },
+      {
+        "name": "大自然家居",
+        "grade": "FSC榉木",
+        "features": "国内地板/家具龙头，供应链稳定，性价比高"
+      },
+      {
+        "name": "曲美家居",
+        "grade": "FAS榉木",
+        "features": "家具专用材，易加工，适合北欧风格"
+      },
+      {
+        "name": "德国硬木公司",
+        "grade": "German Beech",
+        "features": "德国进口，颜色偏浅，纹理细腻"
+      }
+    ],
+    "alternatives": [
+      "硬枫木",
+      "白橡木",
+      "水曲柳",
+      "桦木",
+      "MDF贴榉木皮"
+    ]
+  },
+  {
+    "id": "mat-ash",
+    "type": "Material",
+    "category": "木材",
+    "name": "水曲柳",
+    "nameEn": "Ash (Fraxinus mandshurica)",
+    "description": "CMF设计“经典东北硬木”，国产经典硬木，心材浅棕色至深褐色，边材奶白色，纹理粗犷大气呈山形纹/直纹，密度适中、韧性好、易加工，质感朴实大气，是家具、地板、装饰面板、运动器材的常用材，性价比高于白橡木。",
+    "image": "https://picsum.photos/seed/800/600",
+    "tags": [
+      "经典硬木",
+      "山形纹",
+      "韧性好",
+      "性价比高",
+      "家具",
+      "地板",
+      "运动器材"
+    ],
+    "properties": {
+      "density": "0.65–0.71 g/cm³（气干密度，ASTM D2395）",
+      "hardness": "詹卡硬度 1120 lbf（4980 N，ASTM D143）",
+      "tensileStrength": "顺纹抗拉 100 MPa（ASTM D143）",
+      "yieldStrength": "顺纹抗压 51 MPa（ASTM D143）",
+      "elongation": "1-2%（顺纹）",
+      "flexuralModulus": "抗弯弹性模量 11300 MPa（ASTM D143）",
+      "impactStrength": "冲击韧性 12.5 kJ/m²（ASTM D256）",
+      "heatDistortionTemp": "N/A（木材无热变形温度，150°C开始热降解）",
+      "thermalExpansion": "5.5–7.5 x 10⁻⁶ /°C（顺纹，ASTM D696）",
+      "thermalConductivity": "0.15–0.17 W/m·K（ASTM C177）",
+      "meltingPoint": "N/A（不熔化，约250–300°C分解）",
+      "corrosionResistance": "天然耐腐等级Ⅲ级（中等，GB/T 13942.1-2009），心材耐腐性一般，边材易受虫蛀，适合室内干燥环境",
+      "adhesion": "0级 (ISO 2409 / ASTM D3359，表面打磨后)",
+      "pencilHardness": "取决于表面涂层 (清漆通常为 1H-2H)",
+      "glossRange": "10–70 GU (取决于表面涂装工艺，ASTM D523)",
+      "colorDeltaE": "ΔE*ab ≤ 2.5 (同批次精选材，ASTM D2244)",
+      "contactAngle": "80°–95° (表面涂饰后，ASTM D7334)"
+    },
+    "appearance": "心材浅棕色至深褐色，边材奶白色至浅黄白色，纹理粗犷大气，以山形纹为主，偶见直纹，切面光滑有光泽，质感朴实大气，性价比高，是白橡木的经典替代材。",
+    "processability": [
+      "锯切",
+      "刨削",
+      "砂光",
+      "雕刻",
+      "榫卯",
+      "胶合",
+      "涂装（清漆/木蜡油/色漆）",
+      "激光雕刻",
+      "热压弯曲",
+      "蒸汽弯曲"
+    ],
+    "cost": {
+      "material": "5000–10000 元/m³（2026年国内市场均价，FSC认证国产普通级）",
+      "tooling": "中等",
+      "unit": "中等"
+    },
+    "sustainability": {
+      "recycling": "100%可回收再利用，可翻新、可降解，是碳汇材料（固碳能力约1.6 kg CO₂/kg木材）",
+      "certification": [
+        "FSC",
+        "PEFC",
+        "CARB Phase 2"
+      ],
+      "carbonFootprint": "约0.4–0.9 kg CO₂/kg（含种植、采伐、加工，不含运输）"
+    },
+    "suppliers": [
+      {
+        "name": "中国林业集团",
+        "grade": "FSC水曲柳",
+        "features": "国产东北材，供应链稳定，性价比高"
+      },
+      {
+        "name": "圣象集团",
+        "grade": "FSC水曲柳",
+        "features": "地板专用材，尺寸稳定性高"
+      },
+      {
+        "name": "吉林森工",
+        "grade": "FSC水曲柳",
+        "features": "国产东北材，韧性好，适合运动器材"
+      }
+    ],
+    "alternatives": [
+      "白橡木",
+      "红橡木",
+      "榉木",
+      "榆木",
+      "MDF贴水曲柳木皮"
+    ]
+  },
+  {
+    "id": "mat-white-ash",
+    "type": "Material",
+    "category": "木材",
+    "name": "白蜡木",
+    "nameEn": "White Ash (Fraxinus americana)",
+    "description": "CMF设计“北美经典硬木”，北美进口硬木，心材浅棕灰色至深褐色，边材奶白色至浅黄白色，纹理细腻流畅呈直纹/山形纹，密度适中、韧性极佳、耐磨性好，质感沉稳大气，是家具、地板、运动器材、装饰面板的常用材，适配多种风格设计。",
+    "image": "https://picsum.photos/seed/800/600",
+    "tags": [
+      "北美硬木",
+      "直纹",
+      "韧性极佳",
+      "耐磨",
+      "家具",
+      "地板",
+      "运动器材"
+    ],
+    "properties": {
+      "density": "0.63–0.69 g/cm³（气干密度，ASTM D2395）",
+      "hardness": "詹卡硬度 1290 lbf（5740 N，ASTM D143）",
+      "tensileStrength": "顺纹抗拉 104 MPa（ASTM D143）",
+      "yieldStrength": "顺纹抗压 51 MPa（ASTM D143）",
+      "elongation": "1-2%（顺纹）",
+      "flexuralModulus": "抗弯弹性模量 11800 MPa（ASTM D143）",
+      "impactStrength": "冲击韧性 13.2 kJ/m²（ASTM D256）",
+      "heatDistortionTemp": "N/A（木材无热变形温度，150°C开始热降解）",
+      "thermalExpansion": "5.3–7.3 x 10⁻⁶ /°C（顺纹，ASTM D696）",
+      "thermalConductivity": "0.15–0.17 W/m·K（ASTM C177）",
+      "meltingPoint": "N/A（不熔化，约250–300°C分解）",
+      "corrosionResistance": "天然耐腐等级Ⅲ级（中等，GB/T 13942.1-2009），心材耐腐性一般，边材易受虫蛀，适合室内干燥环境",
+      "adhesion": "0级 (ISO 2409 / ASTM D3359，表面打磨后)",
+      "pencilHardness": "取决于表面涂层 (清漆通常为 1H-2H)",
+      "glossRange": "10–75 GU (取决于表面涂装工艺，ASTM D523)",
+      "colorDeltaE": "ΔE*ab ≤ 2.5 (同批次精选材，ASTM D2244)",
+      "contactAngle": "80°–95° (表面涂饰后，ASTM D7334)"
+    },
+    "appearance": "心材浅棕灰色至深褐色，边材奶白色至浅黄白色，纹理细腻流畅，以直纹为主，偶见山形纹，切面光滑有柔和光泽，质感沉稳大气，加工后表面平整，适配简约、美式等多种设计风格。",
+    "processability": [
+      "锯切",
+      "刨削",
+      "砂光",
+      "雕刻",
+      "榫卯",
+      "胶合",
+      "涂装（清漆/木蜡油/色漆）",
+      "激光雕刻",
+      "热压弯曲",
+      "蒸汽弯曲"
+    ],
+    "cost": {
+      "material": "12000–18000 元/m³（2026年国内市场均价，FSC认证北美进口普通级）；20000–30000 元/m³（精选级/无节材）",
+      "tooling": "中等",
+      "unit": "高"
+    },
+    "sustainability": {
+      "recycling": "100%可回收再利用，可翻新、可降解，是碳汇材料（固碳能力约1.6 kg CO₂/kg木材）",
+      "certification": [
+        "FSC",
+        "PEFC",
+        "CARB Phase 2"
+      ],
+      "carbonFootprint": "约0.6–1.1 kg CO₂/kg（含种植、采伐、加工，不含运输）"
+    },
+    "suppliers": [
+      {
+        "name": "美国硬木协会 (AHEC)",
+        "grade": "FAS White Ash",
+        "features": "北美进口，FAS顶级材，纹理均匀，韧性极佳"
+      },
+      {
+        "name": "加拿大硬木公司",
+        "grade": "Canadian White Ash",
+        "features": "加拿大进口，颜色偏浅，直纹比例高"
+      },
+      {
+        "name": "曲美家居",
+        "grade": "FSC白蜡木",
+        "features": "家具专用材，尺寸稳定性高"
+      },
+      {
+        "name": "圣象集团",
+        "grade": "FSC白蜡木",
+        "features": "地板专用材，耐磨性好"
+      }
+    ],
+    "alternatives": [
+      "水曲柳",
+      "白橡木",
+      "红橡木",
+      "榉木",
+      "MDF贴白蜡木皮"
+    ]
+  },
+  {
+    "id": "mat-radiata-pine",
+    "type": "Material",
+    "category": "木材",
+    "name": "辐射松",
+    "nameEn": "Radiata Pine (Pinus radiata)",
+    "description": "CMF设计“性价比之王”软木，新西兰/智利进口速生材，心材浅黄白色至浅红褐色，边材奶白色，纹理直且均匀，密度低、易加工、价格低廉，质感轻松自然，是家具、地板、装饰面板、木结构建筑的常用材，也是人造板（MDF/刨花板/胶合板）的核心原料。",
+    "image": "https://picsum.photos/seed/800/600",
+    "tags": [
+      "性价比软木",
+      "速生材",
+      "易加工",
+      "价格低廉",
+      "家具",
+      "人造板原料",
+      "木结构"
+    ],
+    "properties": {
+      "density": "0.45–0.53 g/cm³（气干密度，ASTM D2395）",
+      "hardness": "詹卡硬度 480 lbf（2130 N，ASTM D143）",
+      "tensileStrength": "顺纹抗拉 65 MPa（ASTM D143）",
+      "yieldStrength": "顺纹抗压 40 MPa（ASTM D143）",
+      "elongation": "1-2%（顺纹）",
+      "flexuralModulus": "抗弯弹性模量 8200 MPa（ASTM D143）",
+      "impactStrength": "冲击韧性 7.5 kJ/m²（ASTM D256）",
+      "heatDistortionTemp": "N/A（木材无热变形温度，150°C开始热降解）",
+      "thermalExpansion": "6.0–8.0 x 10⁻⁶ /°C（顺纹，ASTM D696）",
+      "thermalConductivity": "0.12–0.14 W/m·K（ASTM C177）",
+      "meltingPoint": "N/A（不熔化，约250–300°C分解）",
+      "corrosionResistance": "天然耐腐等级Ⅳ级（弱，GB/T 13942.1-2009），心材耐腐性差，边材易受虫蛀，需做防腐处理，适合室内干燥环境",
+      "adhesion": "0级 (ISO 2409 / ASTM D3359，表面打磨后)",
+      "pencilHardness": "取决于表面涂层 (清漆通常为 1H-2H)",
+      "glossRange": "10–60 GU (取决于表面涂装工艺，ASTM D523)",
+      "colorDeltaE": "ΔE*ab ≤ 2.5 (同批次精选材，ASTM D2244)",
+      "contactAngle": "75°–90° (表面涂饰后，ASTM D7334)"
+    },
+    "appearance": "心材浅黄白色至浅红褐色，边材奶白色，纹理直且均匀，切面光滑有柔和光泽，质感轻松自然，价格低廉，适合打造简约、北欧、日式风格，也可通过涂装模仿硬木效果。",
+    "processability": [
+      "锯切",
+      "刨削",
+      "砂光",
+      "雕刻",
+      "榫卯",
+      "胶合",
+      "涂装（清漆/木蜡油/色漆）",
+      "激光雕刻",
+      "热压弯曲",
+      "防腐处理"
+    ],
+    "cost": {
+      "material": "1500–3000 元/m³（2026年国内市场均价，FSC认证普通级）；4000–6000 元/m³（精选级/无节材）",
+      "tooling": "低",
+      "unit": "低"
+    },
+    "sustainability": {
+      "recycling": "100%可回收再利用，可翻新、可降解，速生材碳汇能力极强（固碳能力约1.5 kg CO₂/kg木材）",
+      "certification": [
+        "FSC",
+        "PEFC",
+        "CARB Phase 2"
+      ],
+      "carbonFootprint": "约0.2–0.5 kg CO₂/kg（含种植、采伐、加工，不含运输）"
+    },
+    "suppliers": [
+      {
+        "name": "新西兰林业协会 (NZFOA)",
+        "grade": "FSC Radiata Pine",
+        "features": "新西兰进口，速生材，供应链稳定，性价比高"
+      },
+      {
+        "name": "智利林业公司",
+        "grade": "FSC Radiata Pine",
+        "features": "智利进口，颜色偏浅，纹理直"
+      },
+      {
+        "name": "吉林森工",
+        "grade": "FSC辐射松",
+        "features": "国内加工，人造板原料专用"
+      },
+      {
+        "name": "大亚圣象",
+        "grade": "FSC辐射松",
+        "features": "地板/家具专用材，易加工"
+      }
+    ],
+    "alternatives": [
+      "樟子松",
+      "云杉",
+      "MDF",
+      "刨花板",
+      "胶合板"
+    ]
+  },
+  {
+    "id": "mat-teak",
+    "type": "Material",
+    "category": "木材",
+    "name": "柚木",
+    "nameEn": "Teak (Tectona grandis)",
+    "description": "CMF设计“户外之王”木材，东南亚经典硬木，心材初呈浅黄褐色，随使用时间逐渐氧化为浓郁的金褐色至深褐色，边材奶白色，纹理直或略交错，密度适中、天然耐腐性极强（含硅）、稳定性极佳，质感奢华大气，是户外家具、地板、游艇、园林景观的首选。",
+    "image": "https://picsum.photos/seed/800/600",
+    "tags": [
+      "户外之王",
+      "天然耐腐",
+      "金褐色",
+      "奢华大气",
+      "户外家具",
+      "地板",
+      "游艇"
+    ],
+    "properties": {
+      "density": "0.62–0.68 g/cm³（气干密度，ASTM D2395）",
+      "hardness": "詹卡硬度 1070 lbf（4760 N，ASTM D143）",
+      "tensileStrength": "顺纹抗拉 95 MPa（ASTM D143）",
+      "yieldStrength": "顺纹抗压 54 MPa（ASTM D143）",
+      "elongation": "1-2%（顺纹）",
+      "flexuralModulus": "抗弯弹性模量 11000 MPa（ASTM D143）",
+      "impactStrength": "冲击韧性 10.5 kJ/m²（ASTM D256）",
+      "heatDistortionTemp": "N/A（木材无热变形温度，150°C开始热降解）",
+      "thermalExpansion": "4.5–6.5 x 10⁻⁶ /°C（顺纹，ASTM D696）",
+      "thermalConductivity": "0.15–0.17 W/m·K（ASTM C177）",
+      "meltingPoint": "N/A（不熔化，约250–300°C分解）",
+      "corrosionResistance": "天然耐腐等级Ⅰ级（极强，GB/T 13942.1-2009），心材含硅，耐腐耐白蚁耐海水，边材易受虫蛀，适合户外/潮湿/海洋环境",
+      "adhesion": "0级 (ISO 2409 / ASTM D3359，表面打磨去硅后)",
+      "pencilHardness": "取决于表面涂层 (建议木蜡油/清涂)",
+      "glossRange": "10–70 GU (取决于表面涂装工艺，清涂随氧化会逐渐呈现自然光泽，ASTM D523)",
+      "colorDeltaE": "ΔE*ab ≤ 2.0 (同批次精选材，氧化前，ASTM D2244)",
+      "contactAngle": "90°–105° (表面涂饰后，ASTM D7334)"
+    },
+    "appearance": "心材初呈浅黄褐色，随使用时间逐渐氧化为浓郁的金褐色至深褐色，边材奶白色，纹理直或略交错，切面光滑有油脂感（含硅），质感奢华大气，户外使用无需涂漆也能保持稳定性，自然包浆效果是其核心魅力。",
+    "processability": [
+      "锯切（需专用刀具，因含硅易磨损）",
+      "刨削",
+      "砂光",
+      "雕刻",
+      "榫卯",
+      "胶合（需表面去硅）",
+      "涂装（建议木蜡油/清漆，不建议色漆以展示自然氧化）",
+      "激光雕刻"
+    ],
+    "cost": {
+      "material": "12000–20000 元/m³（2026年国内市场均价，FSC认证缅甸/印尼普通级）；25000–45000 元/m³（精选级/无节材/老柚木）",
+      "tooling": "中等偏高",
+      "unit": "极高"
+    },
+    "sustainability": {
+      "recycling": "100%可回收再利用，可翻新、可降解，是碳汇材料（固碳能力约1.6 kg CO₂/kg木材）",
+      "certification": [
+        "FSC",
+        "PEFC",
+        "Lacey Act"
+      ],
+      "carbonFootprint": "约0.7–1.3 kg CO₂/kg（含种植、采伐、加工，不含运输）"
+    },
+    "suppliers": [
+      {
+        "name": "缅甸林业公司",
+        "grade": "FSC Teak",
+        "features": "缅甸进口，老柚木，颜色浓郁，耐腐性强"
+      },
+      {
+        "name": "印尼林业公司",
+        "grade": "FSC Teak",
+        "features": "印尼进口， plantation teak，供应链稳定"
+      },
+      {
+        "name": "大自然家居（户外线）",
+        "grade": "FSC柚木",
+        "features": "国内户外家具/地板龙头，精选级材"
+      },
+      {
+        "name": "泰国林业公司",
+        "grade": "FSC Teak",
+        "features": "泰国进口，颜色偏浅，性价比高"
+      }
+    ],
+    "alternatives": [
+      "菠萝格",
+      "巴劳木",
+      "重蚁木",
+      "黑胡桃木（室内）",
+      "MDF贴柚木皮"
+    ]
+  },
+  {
+    "id": "mat-copperplate-paper",
+    "type": "Material",
+    "category": "纸",
+    "name": "铜版纸",
+    "nameEn": "Copper Plate Paper (Coated Offset Paper)",
+    "description": "CMF设计印刷核心用材，以漂白化学木浆为基料，表面涂布碳酸钙/瓷土涂层，分高光铜版与哑光铜版两类。纹理细腻、色彩还原度极高、光泽感强，是产品包装、画册、海报、CMF色卡制作的首选涂布纸，适配胶印/数码印刷。",
+    "image": "https://picsum.photos/seed/800/600",
+    "tags": [
+      "涂布纸",
+      "高光泽",
+      "色彩还原",
+      "画册",
+      "包装",
+      "CMF色卡",
+      "胶印专用"
+    ],
+    "properties": {
+      "density": "0.85–1.10 g/cm³（GB/T 451.3-2005）",
+      "grammage": "128–300 g/m²（CMF设计常用157/200/250 g/m²，GB/T 451.2-2002）",
+      "whiteness": "85–92 ISO（GB/T 7974-2013）",
+      "tensileStrength": "顺纹抗拉 3.5–5.2 kN/m（GB/T 12914-2008）",
+      "burstStrength": "200–350 kPa（GB/T 454-2002）",
+      "foldingResistance": "200–500 次（双折，GB/T 2679.5-2002）",
+      "waterAbsorption": "5–15 g/m²（2min，GB/T 1540-2002）",
+      "glossiness": "60–85 GU（高光型，ASTM D523）；20–40 GU（哑光型，ASTM D523）",
+      "colorDeltaE": "ΔE*ab ≤ 1.0（同批次，ASTM D2244）",
+      "opacity": "85–95%（GB/T 1543-2005）",
+      "coatingAdhesion": "0级 (GB/T 2679.11-1996，蜡棒法，涂层无脱落)"
+    },
+    "appearance": "表面平整光洁，呈高光泽/细腻哑光质感，纹理细腻无明显纤维感，色彩还原度达98%以上，可呈现高清渐变、金属色等复杂CMF效果，边缘裁切无毛刺。",
+    "processability": [
+      "胶印印刷",
+      "数码印刷",
+      "烫金/烫银",
+      "UV上光",
+      "模切",
+      "压纹",
+      "覆膜（光膜/哑膜）",
+      "激光雕刻"
+    ],
+    "cost": {
+      "material": "8–18 元/kg（2026年国内市场均价，普通157g）；25–45 元/kg（进口高端250g）",
+      "tooling": "低",
+      "unit": "低-中等"
+    },
+    "sustainability": {
+      "recycling": "100%可回收再利用，再生纸白度保留率≥70%",
+      "certification": [
+        "FSC",
+        "PEFC",
+        "GB 11680-1989（食品包装级）",
+        "RoHS"
+      ],
+      "carbonFootprint": "约0.8–1.5 kg CO₂/kg（中国造纸协会2025年《中国造纸行业碳足迹核算指南》典型值）"
+    },
+    "suppliers": [
+      {
+        "name": "APP金光纸业",
+        "grade": "金东铜版纸",
+        "features": "国内铜版纸龙头，涂层均匀，色彩还原度高，CMF设计常用料"
+      },
+      {
+        "name": "玖龙纸业",
+        "grade": "海龙铜版纸",
+        "features": "性价比高，157/200g现货充足，适合量产包装"
+      },
+      {
+        "name": "芬欧汇川（UPM）",
+        "grade": "UPM Finesse Classic 优光铜版纸",
+        "features": "进口高端，低克重高挺度，适合高端画册/色卡"
+      },
+      {
+        "name": "华泰纸业",
+        "grade": "华泰铜版纸",
+        "features": "国产高性价比，耐折性优异，适合折叠包装"
+      }
+    ],
+    "alternatives": [
+      "哑粉纸",
+      "艺术纸",
+      "白卡纸",
+      "铸涂纸"
+    ]
+  },
+  {
+    "id": "mat-matte-paper",
+    "type": "Material",
+    "category": "纸",
+    "name": "哑粉纸",
+    "nameEn": "Matte Coated Paper (Matt Coated Offset Paper)",
+    "description": "CMF设计“低敏质感”首选纸材，表面涂布哑光粉（二氧化硅/滑石粉），无反光、触感柔和，吸墨性优于铜版纸，色彩呈现沉稳内敛，适配高端产品画册、包装、CMF哑光效果展示，是极简风格设计的核心用材。",
+    "image": "https://picsum.photos/seed/800/600",
+    "tags": [
+      "哑光涂布纸",
+      "无反光",
+      "柔和触感",
+      "极简设计",
+      "画册",
+      "包装",
+      "CMF哑光展示"
+    ],
+    "properties": {
+      "density": "0.80–1.05 g/cm³（GB/T 451.3-2005）",
+      "grammage": "128–250 g/m²（CMF设计常用157/200 g/m²，GB/T 451.2-2002）",
+      "whiteness": "80–88 ISO（GB/T 7974-2013）",
+      "tensileStrength": "顺纹抗拉 3.2–4.8 kN/m（GB/T 12914-2008）",
+      "burstStrength": "180–320 kPa（GB/T 454-2002）",
+      "foldingResistance": "180–450 次（双折，GB/T 2679.5-2002）",
+      "waterAbsorption": "8–20 g/m²（2min，GB/T 1540-2002）",
+      "glossiness": "15–35 GU（ASTM D523）",
+      "colorDeltaE": "ΔE*ab ≤ 1.2（同批次，ASTM D2244）",
+      "opacity": "82–92%（GB/T 1543-2005）",
+      "coatingAdhesion": "0级 (GB/T 2679.11-1996，蜡棒法，涂层无脱落)"
+    },
+    "appearance": "表面呈细腻哑光磨砂质感，无镜面反光，触感温润有纤维感，色彩柔和不刺眼，适合呈现莫兰迪色、大地色等低饱和度CMF色系，印刷文字清晰不晕染。",
+    "processability": [
+      "胶印印刷",
+      "数码印刷",
+      "压纹",
+      "烫金（冷烫更适配）",
+      "覆膜（哑膜/触感膜）",
+      "模切",
+      "激光雕刻"
+    ],
+    "cost": {
+      "material": "9–20 元/kg（2026年国内市场均价，普通157g）；30–50 元/kg（进口哑光涂布纸）",
+      "tooling": "低",
+      "unit": "低-中等"
+    },
+    "sustainability": {
+      "recycling": "100%可回收再利用，可降解",
+      "certification": [
+        "FSC",
+        "PEFC",
+        "RoHS"
+      ],
+      "carbonFootprint": "约0.7–1.4 kg CO₂/kg（中国造纸协会2025年《中国造纸行业碳足迹核算指南》典型值）"
+    },
+    "suppliers": [
+      {
+        "name": "金华盛纸业",
+        "grade": "金华盛哑粉纸",
+        "features": "国内哑光纸龙头，涂层细腻，无反光不均问题"
+      },
+      {
+        "name": "太阳纸业",
+        "grade": "太阳哑粉纸",
+        "features": "高挺度，适合立体包装/折页"
+      },
+      {
+        "name": "斯道拉恩索",
+        "grade": "PPM Matt 哑粉纸",
+        "features": "进口高端，触感优异，适合高端CMF色卡"
+      },
+      {
+        "name": "博汇纸业",
+        "grade": "博汇哑粉纸",
+        "features": "性价比高，128g现货充足"
+      }
+    ],
+    "alternatives": [
+      "艺术纸（哑光）",
+      "硫酸纸",
+      "棉纸",
+      "铜版纸（覆膜哑膜）"
+    ]
+  },
+  {
+    "id": "mat-white-cardboard",
+    "type": "Material",
+    "category": "纸",
+    "name": "白卡纸",
+    "nameEn": "White Cardboard (Coated White Board)",
+    "description": "CMF设计硬质感核心用材，以漂白木浆为基料，双面涂布白涂层，挺度高、耐破性强、表面光洁，适配高端产品礼盒、名片、CMF材质样板、手提袋，是包装与展示结合的首选纸材。",
+    "image": "https://picsum.photos/seed/800/600",
+    "tags": [
+      "硬纸板",
+      "高挺度",
+      "双面涂布",
+      "礼盒",
+      "名片",
+      "CMF样板",
+      "手提袋"
+    ],
+    "properties": {
+      "density": "0.90–1.15 g/cm³（GB/T 451.3-2005）",
+      "grammage": "210–400 g/m²（CMF设计常用300/350/400 g/m²，超400g归入纸板范畴，GB/T 451.2-2002）",
+      "whiteness": "88–95 ISO（GB/T 7974-2013）",
+      "tensileStrength": "顺纹抗拉 4.5–6.8 kN/m（GB/T 12914-2008）",
+      "burstStrength": "350–550 kPa（GB/T 454-2002）",
+      "stiffness": "200–1200 mN·m（210g：200-400 mN·m；400g：800-1200 mN·m，GB/T 22364-2008）",
+      "waterAbsorption": "3–10 g/m²（2min，GB/T 1540-2002）",
+      "glossiness": "50–80 GU（正面，ASTM D523）；10–30 GU（背面，ASTM D523）",
+      "colorDeltaE": "ΔE*ab ≤ 0.8（同批次，ASTM D2244）",
+      "opacity": "98–100%（GB/T 1543-2005）",
+      "coatingAdhesion": "0级 (GB/T 2679.11-1996，蜡棒法，涂层无脱落)"
+    },
+    "appearance": "双面洁白光洁，正面涂层细腻有光泽，背面略粗糙，挺度极高，弯折后不易回弹，可呈现纯色、烫金、压纹、UV等多样化CMF外观，质感扎实有分量感。",
+    "processability": [
+      "胶印印刷",
+      "烫金/烫银/击凸",
+      "模切",
+      "压纹",
+      "覆膜（触感膜/亮膜）",
+      "糊盒",
+      "激光雕刻"
+    ],
+    "cost": {
+      "material": "12–28 元/kg（2026年国内市场均价，普通300g）；40–70 元/kg（进口高端350g/无酸白卡纸）",
+      "tooling": "低",
+      "unit": "中等"
+    },
+    "sustainability": {
+      "recycling": "100%可回收再利用，无酸白卡纸可长期保存（≥10年）",
+      "certification": [
+        "FSC",
+        "PEFC",
+        "GB 11680-1989（食品包装级）",
+        "RoHS"
+      ],
+      "carbonFootprint": "约0.9–1.6 kg CO₂/kg（中国造纸协会2025年《中国造纸行业碳足迹核算指南》典型值）"
+    },
+    "suppliers": [
+      {
+        "name": "APP金光纸业",
+        "grade": "宁波亚浆 宁亚白卡/酋长白卡",
+        "features": "国内白卡纸标杆，涂层均匀无杂质，CMF设计常用料"
+      },
+      {
+        "name": "玖龙纸业",
+        "grade": "玖龙白卡纸",
+        "features": "高性价比，300/350g现货充足，适合量产礼盒"
+      },
+      {
+        "name": "斯道拉恩索",
+        "grade": "Galaxy 银河白卡",
+        "features": "进口无酸白卡纸，耐黄变，适合高端CMF样板"
+      },
+      {
+        "name": "华泰纸业",
+        "grade": "华泰白卡纸",
+        "features": "耐破性优异，适合重型包装/手提袋"
+      }
+    ],
+    "alternatives": [
+      "灰底白卡纸",
+      "牛卡纸",
+      "硬纸板",
+      "密度板（替代展示）"
+    ]
+  },
+  {
+    "id": "mat-kraft-paper",
+    "type": "Material",
+    "category": "纸",
+    "name": "牛皮纸",
+    "nameEn": "Kraft Paper (Kraft Linerboard)",
+    "description": "CMF设计自然质感核心用材，以针叶木浆为基料，本色为浅棕褐色，纤维粗长、韧性极强，分普通牛皮纸与食品级牛皮纸两类。纹理粗犷、耐破耐撕性优异，适配工业风包装、手账、CMF材质对比展示、环保主题设计。",
+    "image": "https://picsum.photos/seed/800/600",
+    "tags": [
+      "本色纸",
+      "高韧性",
+      "工业风",
+      "环保",
+      "包装",
+      "手账",
+      "CMF对比展示"
+    ],
+    "properties": {
+      "density": "0.70–0.90 g/cm³（GB/T 451.3-2005）",
+      "grammage": "80–300 g/m²（CMF设计常用120/150/200 g/m²，GB/T 451.2-2002）",
+      "whiteness": "25–40 ISO（本色，GB/T 7974-2013）",
+      "tensileStrength": "顺纹抗拉 6.0–10.5 kN/m（GB/T 12914-2008）",
+      "burstStrength": "400–700 kPa（GB/T 454-2002）",
+      "tearingResistance": "800–1000 mN（80-150g/m²，GB/T 455.1-2002）；1000–1800 mN（150-300g/m²，GB/T 455.2-2002）",
+      "foldingResistance": "500–1200 次（双折，GB/T 2679.5-2002）",
+      "waterAbsorption": "15–35 g/m²（2min，GB/T 1540-2002）",
+      "glossiness": "5–15 GU（表面，ASTM D523）",
+      "colorDeltaE": "ΔE*ab ≤ 2.0（同批次，ASTM D2244）",
+      "opacity": "90–98%（GB/T 1543-2005）",
+      "coatingAdhesion": "N/A (无原生涂层)"
+    },
+    "appearance": "呈自然浅棕褐色至深褐色，纤维纹理粗犷清晰，手感粗糙有韧性，无涂层质感，可通过染色、烫金、压纹实现个性化CMF效果，耐撕不易破损，自带复古工业风属性。",
+    "processability": [
+      "胶印印刷",
+      "数码印刷",
+      "烫金/烫银",
+      "模切",
+      "压纹",
+      "覆膜",
+      "激光雕刻",
+      "染色"
+    ],
+    "cost": {
+      "material": "6–15 元/kg（2026年国内市场均价，普通120g）；20–35 元/kg（进口食品级/全木浆牛皮纸）",
+      "tooling": "低",
+      "unit": "低"
+    },
+    "sustainability": {
+      "recycling": "100%可回收再利用，可自然降解，再生料性能保留率≥80%",
+      "certification": [
+        "FSC",
+        "PEFC",
+        "GB 4806.8-2016（食品接触级）",
+        "RoHS"
+      ],
+      "carbonFootprint": "约0.5–1.0 kg CO₂/kg（中国造纸协会2025年《中国造纸行业碳足迹核算指南》典型值）"
+    },
+    "suppliers": [
+      {
+        "name": "玖龙纸业",
+        "grade": "玖龙牛皮纸",
+        "features": "国内龙头，全木浆材质，现货充足，性价比高"
+      },
+      {
+        "name": "理文造纸",
+        "grade": "理文牛皮纸",
+        "features": "高耐撕性，适合重型包装"
+      },
+      {
+        "name": "斯道拉恩索",
+        "grade": "Testliner 牛皮纸",
+        "features": "进口食品级，无荧光剂，适合食品包装"
+      },
+      {
+        "name": "太阳纸业",
+        "grade": "太阳牛皮纸",
+        "features": "国产高性价比，适合手账/文创设计"
+      }
+    ],
+    "alternatives": [
+      "牛卡纸",
+      "再生牛皮纸",
+      "黄卡纸",
+      "特种艺术纸"
+    ]
+  }
 ];

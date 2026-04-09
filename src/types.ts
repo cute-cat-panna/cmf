@@ -40,6 +40,16 @@ export interface CMFItem {
     tearStrength?: string;
     stress50?: string;
     stress100?: string;
+    grammage?: string;
+    whiteness?: string;
+    burstStrength?: string;
+    foldingResistance?: string;
+    waterAbsorption?: string;
+    glossiness?: string;
+    opacity?: string;
+    coatingAdhesion?: string;
+    stiffness?: string;
+    tearingResistance?: string;
   };
   appearance?: string;
   processability?: string[];
