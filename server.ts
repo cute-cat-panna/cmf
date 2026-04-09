@@ -22,7 +22,10 @@ async function startServer() {
 
   if (process.env.NODE_ENV !== 'production') {
     const vite = await createViteServer({
-      server: { middlewareMode: true },
+      server: { 
+        middlewareMode: true,
+        hmr: false // Disable HMR to prevent WebSocket connection errors in preview
+      },
       appType: 'spa',
     });
     app.use(vite.middlewares);
