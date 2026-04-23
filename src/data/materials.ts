@@ -606,7 +606,7 @@ export const materials: CMFItem[] = [
     name: 'AZ91D 镁合金',
     nameEn: 'AZ91D Magnesium Alloy',
     description: '压铸镁合金经典牌号，铝含量高，压铸流动性优异，可实现0.5mm薄壁成型，轻量化效果突出（约为钢的1/4），具备优异的减振性，广泛应用于3C电子、汽车内饰、五金工具等领域。',
-    image: 'https://picsum.photos/seed/800/600',
+    image: 'https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=1753229039,2862127295&fm=199&app=68&f=JPEG?w=750&h=750&s=3811E011761263C60801D1C70100E0B1',
     tags: ['压铸镁合金', '轻量化', '高流动性', '薄壁成型', '3C电子', '汽车部件'],
     properties: {
       density: '1.82 g/cm³',
@@ -626,7 +626,7 @@ export const materials: CMFItem[] = [
     },
     appearance: '银白色金属光泽，压铸态表面平整光洁，可通过微弧氧化、喷涂、电泳、PVD镀实现哑光、高光、金属色等多样化表面效果，薄壁成型尺寸稳定性优异。',
     processability: ['高压压铸', '半固态成型', 'CNC精密机加工', '微弧氧化', '静电喷涂', '阴极电泳', 'PVD真空镀', '激光雕刻'],
-    cost: { material: '22–35 元/kg（2026年国内市场均价）', tooling: '中等', unit: '中等偏低' },
+    cost: { material: '18.50-18.90 元/kg', tooling: '中等', unit: '中等偏低' },
     sustainability: {
       recycling: '100%可无限循环回收，再生料需调整合金成分以保证压铸性能',
       certification: ['RoHS', 'REACH']
@@ -646,7 +646,7 @@ export const materials: CMFItem[] = [
     name: '6061-T6 铝合金',
     nameEn: '6061-T6 Aluminum Alloy',
     description: '变形铝合金经典牌号，T6热处理态（固溶+人工时效），强度与塑性平衡优异，可焊接、可阳极氧化着色，表面处理效果丰富，是工业产品结构外观件通用“万能铝”。',
-    image: 'https://picsum.photos/seed/800/600',
+    image: 'https://www.lyah-machining.com/wp-content/uploads/2025/12/6061-Aluminum.jpg',
     tags: ['变形铝合金', 'T6热处理', '可阳极氧化', '可焊接', '通用结构件', '3C电子'],
     properties: {
       density: '2.70 g/cm³',
@@ -667,7 +667,7 @@ export const materials: CMFItem[] = [
     },
     appearance: '银白色金属光泽，冷轧/挤压态表面光洁，可通过阳极氧化实现彩色膜层，也可通过喷砂、拉丝、抛光、喷涂实现从全哑光到镜面高光的多样化质感，尺寸稳定性优异。',
     processability: ['挤压成型', '冲压折弯', 'CNC精密机加工', '阳极氧化', '硬质阳极氧化', '静电喷涂', '拉丝', '喷砂', '激光焊接'],
-    cost: { material: '18–28 元/kg（2026年国内市场均价）', tooling: '中等', unit: '中等' },
+    cost: { material: '约23.00 元/kg', tooling: '中等', unit: '中等' },
     sustainability: {
       recycling: '100%可无限循环回收，再生料冶金性能与新料无显著差异',
       certification: ['RoHS', 'REACH', 'ELV'],
@@ -688,7 +688,7 @@ export const materials: CMFItem[] = [
     name: '304 不锈钢 (06Cr19Ni10)',
     nameEn: '304 Stainless Steel (AISI 304)',
     description: '奥氏体铬镍不锈钢通用牌号，含18%铬+8%镍，表面钝化膜耐大气/水腐蚀极强，无磁性、易抛光、可焊接，是厨卫、家电、3C、五五金装饰件的“国民不锈钢”。',
-    image: 'https://picsum.photos/seed/800/600',
+    image: 'https://tgi12.jia.com/129/658/29658115.jpg',
     tags: ['奥氏体不锈钢', '耐蚀', '无磁性', '易抛光', '厨卫家电', '五金装饰'],
     properties: {
       density: '7.93 g/cm³',
@@ -709,7 +709,7 @@ export const materials: CMFItem[] = [
     },
     appearance: '银白色金属光泽，冷轧态表面光洁度极高，可通过抛光实现8K镜面，也可通过喷砂、拉丝、蚀刻、PVD镀实现多样化质感，裸用长期使用仍能保持外观稳定性。',
     processability: ['冷轧', '冲压折弯', '深冲', 'CNC机加工', '抛光', '拉丝', '喷砂', 'PVD真空镀', '激光焊接', '氩弧焊'],
-    cost: { material: '16–24 元/kg（2026年国内市场均价）', tooling: '中等', unit: '中等' },
+    cost: { material: '15.15-15.35 元/kg', tooling: '中等', unit: '中等' },
     sustainability: {
       recycling: '100%可无限循环回收，再生料冶金性能与新料无显著差异',
       certification: ['RoHS', 'REACH', 'FDA（食品接触）'],
@@ -730,7 +730,7 @@ export const materials: CMFItem[] = [
     name: 'SPCC 冷轧低碳钢',
     nameEn: 'SPCC Cold Rolled Low Carbon Steel',
     description: '冷轧低碳钢通用牌号（GB/Q/BQB 402对应），碳含量≤0.12%，塑性优异、易冲压折弯、易焊接，表面质量高，是家电、机箱、汽车钣金的“基础钢材”，必须做防腐+表面防护处理。',
-    image: 'https://picsum.photos/seed/800/600',
+    image: 'https://www.ushinedev.com/Content/img/commodity/commodity-banner.jpg',
     tags: ['冷轧低碳钢', '易冲压', '易焊接', '家电钣金', '机箱机柜', '需防腐'],
     properties: {
       density: '7.85 g/cm³',
@@ -751,7 +751,7 @@ export const materials: CMFItem[] = [
     },
     appearance: '银白色金属光泽，冷轧态表面平整光洁、无氧化皮，需通过磷化、电泳、喷涂实现防腐与装饰效果，可实现从全哑光到高光的多样化外观，尺寸稳定性优异。',
     processability: ['冷轧', '冲压折弯', '深冲', 'CNC机加工', '焊接', '磷化', '阴极电泳', '静电喷涂', '粉末喷涂', '激光切割'],
-    cost: { material: '5–8 元/kg（2026年国内市场均价）', tooling: '低', unit: '低' },
+    cost: { material: '3.79-3.81 元/kg', tooling: '低', unit: '低' },
     sustainability: {
       recycling: '100%可无限循环回收，再生料冶金性能与新料无显著差异',
       certification: ['RoHS', 'REACH'],
@@ -772,7 +772,7 @@ export const materials: CMFItem[] = [
     name: 'Zamak3 锌合金 (ZnAl4)',
     nameEn: 'Zamak3 Zinc Alloy (ZnAl4)',
     description: '压铸锌合金经典牌号（GB ZZnAl4对应），含4%铝，压铸流动性极佳、尺寸精度高、易电镀/喷涂，熔点低（380℃）、成型效率高，是五金装饰件、拉链、玩具、锁具的“首选压铸合金”。',
-    image: 'https://picsum.photos/seed/zamak3-zinc/800/600',
+    image: 'https://imgqn.smm.cn/production/admin/company/KaVsq20170626103521.png?imageView2/2/w/750',
     tags: ['压铸锌合金', '高流动性', '易电镀', '尺寸精度高', '五金装饰', '锁具玩具'],
     properties: {
       density: '6.6 g/cm³',
@@ -793,7 +793,7 @@ export const materials: CMFItem[] = [
     },
     appearance: '银白色金属光泽，压铸态表面平整光洁、细节还原度高，可通过电镀（仿金/仿银/仿铜）、喷涂、电泳实现奢华金属质感，尺寸精度可达IT8-IT10级。',
     processability: ['高压压铸', 'CNC机加工', '抛光', '电镀（铜/镍/铬）', '静电喷涂', '电泳', '激光雕刻'],
-    cost: { material: '18–25 元/kg（2026年国内市场均价）', tooling: '低', unit: '低' },
+    cost: { material: '25.36 元/kg', tooling: '低', unit: '低' },
     sustainability: {
       recycling: '100%可无限循环回收，再生料需调整合金成分以保证压铸性能',
       certification: ['RoHS', 'REACH']
@@ -813,7 +813,7 @@ export const materials: CMFItem[] = [
     name: '316L 不锈钢 (02Cr17Ni12Mo2)',
     nameEn: '316L Stainless Steel (AISI 316L)',
     description: '超低碳奥氏体铬镍钼不锈钢，含2-3%钼，耐点蚀和缝隙腐蚀性能极佳，具有优异的抗氯离子腐蚀能力，生物相容性好，是高端腕表、首饰、医疗器械及化工设备的顶级用材。',
-    image: 'https://picsum.photos/seed/316l-stainless/800/600',
+    image: 'https://cbu01.alicdn.com/img/ibank/2016/388/539/3080935883_89312728.jpg',
     tags: ['奥氏体不锈钢', '耐点蚀', '医疗级', '高端腕表', '无磁性'],
     properties: {
       density: '7.98 g/cm³',
@@ -834,7 +834,7 @@ export const materials: CMFItem[] = [
     },
     appearance: '银白色金属光泽，色泽较304略深，抛光后质感极其细腻，可实现极致镜面效果。',
     processability: ['冷轧', '冲压', 'CNC精密加工', '抛光', 'PVD镀', '激光焊接'],
-    cost: { material: '25–40 元/kg', tooling: '中等', unit: '中等' },
+    cost: { material: '26.60-27.55 元/kg', tooling: '中等', unit: '中等' },
     sustainability: {
       recycling: '100%可回收',
       certification: ['RoHS', 'REACH', 'ISO 10993']
@@ -852,7 +852,7 @@ export const materials: CMFItem[] = [
     name: '5052 铝合金',
     nameEn: '5052 Aluminum Alloy',
     description: 'AL-Mg系防锈铝，镁是主要合金元素。具有高疲劳强度，塑性与耐蚀性高，不能热处理强化，在半冷作硬化时塑性尚好，冷作硬化时塑性低，焊接性良好，是钣金件常用铝材。',
-    image: 'https://picsum.photos/seed/5052-aluminum/800/600',
+    image: 'https://www.jbairui.com/cncimages/lj026.jpg',
     tags: ['防锈铝', '钣金件', '高疲劳强度', '可焊接'],
     properties: {
       density: '2.68 g/cm³',
@@ -872,7 +872,7 @@ export const materials: CMFItem[] = [
     },
     appearance: '银白色，表面纹理细腻，阳极氧化后色彩均匀度高。',
     processability: ['钣金折弯', '冲压', '阳极氧化', '焊接'],
-    cost: { material: '20–30 元/kg', tooling: '低', unit: '低' },
+    cost: { material: '26.51 元/kg', tooling: '低', unit: '低' },
     sustainability: {
       recycling: '100%可回收',
       certification: ['RoHS', 'REACH']
@@ -889,7 +889,7 @@ export const materials: CMFItem[] = [
     name: '7075-T6 铝合金',
     nameEn: '7075-T6 Aluminum Alloy',
     description: '超硬铝合金，锌是主要合金元素。强度极高，机械性能优良，具有良好的抗疲劳强度，常用于航空航天及高应力结构件。',
-    image: 'https://picsum.photos/seed/7075-aluminum/800/600',
+    image: 'https://tse1.mm.bing.net/th/id/OIP.WDO7FqsrmszqOa0LTpHcIQHaEK?rs=1&pid=ImgDetMain&o=7&rm=3',
     tags: ['超硬铝', '高强度', '航空航天', '高应力'],
     properties: {
       density: '2.81 g/cm³',
@@ -909,7 +909,7 @@ export const materials: CMFItem[] = [
     },
     appearance: '银白色，质感坚硬，加工后表面光洁度高。',
     processability: ['CNC加工', '锻造', '阳极氧化'],
-    cost: { material: '35–55 元/kg', tooling: '高', unit: '中等' },
+    cost: { material: '32.00-42.50 元/kg', tooling: '高', unit: '中等' },
     sustainability: {
       recycling: '100%可回收',
       certification: ['RoHS', 'REACH']
@@ -926,7 +926,7 @@ export const materials: CMFItem[] = [
     name: 'T2 纯铜 (红铜)',
     nameEn: 'T2 Pure Copper',
     description: '高纯度铜，具有极佳的导电、导热性能和良好的耐蚀性、加工性能，可焊接和钎焊。',
-    image: 'https://picsum.photos/seed/t2-copper/800/600',
+    image: 'https://tse1.mm.bing.net/th/id/OIP.lqbfZi8VEzX0cvc-n5LfJQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3',
     tags: ['高导电', '高导热', '红铜', '散热件'],
     properties: {
       density: '8.96 g/cm³',
@@ -963,7 +963,7 @@ export const materials: CMFItem[] = [
     name: 'Zamak 5 锌合金',
     nameEn: 'Zamak 5 Zinc Alloy',
     description: '含1%铜的锌合金，较Zamak 3具有更高的强度和硬度，以及更好的耐蚀性，但塑性略低。',
-    image: 'https://picsum.photos/seed/zamak5/800/600',
+    image: 'https://tse1.mm.bing.net/th/id/OIP.4jHgkxK3aUaLOGmowiw_pQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
     tags: ['压铸锌合金', '高强度', '易电镀'],
     properties: {
       density: '6.7 g/cm³',
@@ -1000,7 +1000,7 @@ export const materials: CMFItem[] = [
     name: 'AM60B 镁合金',
     nameEn: 'AM60B Magnesium Alloy',
     description: '高韧性压铸镁合金，具有极佳的延伸率和抗冲击性能，常用于汽车方向盘、座椅骨架等安全件。',
-    image: 'https://picsum.photos/seed/am60b/800/600',
+    image: 'https://tse4.mm.bing.net/th/id/OIP.U90ciLA5ZBE1nOuR5jABbQHaEV?rs=1&pid=ImgDetMain&o=7&rm=3',
     tags: ['压铸镁合金', '高韧性', '抗冲击', '安全件'],
     properties: {
       density: '1.80 g/cm³',
@@ -1037,7 +1037,7 @@ export const materials: CMFItem[] = [
     name: 'TA2 工业纯钛',
     nameEn: 'Grade 2 Titanium',
     description: '工业纯钛，具有优异的耐蚀性、良好的塑性和焊接性，强度中等，生物相容性极佳。',
-    image: 'https://picsum.photos/seed/ta2-titanium/800/600',
+    image: 'https://tse1.mm.bing.net/th/id/OIP.70WOo3ieH43Z2rr5npv3NwHaEs?rs=1&pid=ImgDetMain&o=7&rm=3',
     tags: ['纯钛', '极高耐蚀', '生物相容', '易成型'],
     properties: {
       density: '4.51 g/cm³',
@@ -1074,7 +1074,7 @@ export const materials: CMFItem[] = [
     name: 'HT200 灰铸铁',
     nameEn: 'Gray Cast Iron HT200',
     description: '灰铸铁，具有良好的铸造性能、减振性、耐磨性和切削加工性，成本低廉，广泛用于机床床身、箱体等。',
-    image: 'https://picsum.photos/seed/gray-iron/800/600',
+    image: 'https://tse2.mm.bing.net/th/id/OIP.B4AD4avXUOZeVhzNFJKE5QHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
     tags: ['铸铁', '减振', '耐磨', '低成本'],
     properties: {
       density: '7.2 g/cm³',
@@ -1111,7 +1111,7 @@ export const materials: CMFItem[] = [
     name: 'TC4 钛合金 (Ti-6Al-4V)',
     nameEn: 'TC4 Titanium Alloy (Ti-6Al-4V)',
     description: 'α+β型钛合金经典牌号，强度高（比强度是钢的2倍）、密度低（4.51g/cm³）、耐蚀性极强（可裸用海水）、生物相容性优异，是高端3C、医疗、航空航天、户外装备的“黄金合金”。',
-    image: 'https://picsum.photos/seed/800/600',
+    image: 'https://tse2.mm.bing.net/th/id/OIP.ijgD2XBg8RcuN3BjgvKI7wHaFk?rs=1&pid=ImgDetMain&o=7&rm=3',
     tags: ['钛合金', '高强度', '轻量化', '耐蚀', '生物相容', '高端3C', '医疗'],
     properties: {
       density: '4.51 g/cm³',
@@ -1153,7 +1153,7 @@ export const materials: CMFItem[] = [
     name: 'H62 黄铜 (CuZn37)',
     nameEn: 'H62 Brass (CuZn37)',
     description: '普通黄铜经典牌号，含62%铜+38%锌，塑性与强度平衡优异、易冲压折弯、易焊接、易电镀抛光，导电导热性能好，是五金端子、卫浴洁具、装饰件、锁具的“经典铜合金”。',
-    image: 'https://picsum.photos/seed/800/600',
+    image: 'https://www.lyah-machining.com/wp-content/uploads/2025/03/H59-vs-H62-Brass.jpg',
     tags: ['黄铜', '易冲压', '易电镀', '导电导热', '卫浴洁具', '五金端子', '装饰件'],
     properties: {
       density: '8.5 g/cm³',
@@ -1195,7 +1195,7 @@ export const materials: CMFItem[] = [
     name: '403 不锈钢',
     nameEn: '403 Stainless Steel (AISI 403)',
     description: '马氏体铬不锈钢，可通过热处理实现硬化，高温抗氧化性优异，具备中等耐蚀性与良好的抗蒸汽腐蚀能力，力学性能稳定，是动力机械核心部件经典用材。',
-    image: 'https://picsum.photos/seed/magnesium-alloy-part/800/600',
+    image: 'https://www.lyah-machining.com/wp-content/uploads/2024/12/Martensitic-Stainless-Steel.jpg',
     tags: ['可热处理硬化', '耐高温氧化', '抗蒸汽腐蚀', '马氏体', '机械件'],
     properties: {
       density: '7.75 g/cm³',
